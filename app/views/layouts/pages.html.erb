@@ -23,6 +23,12 @@
 </head>
 
 <body>
+<nav>
+  <ul>
+    <li><%= link_to "Korsarium", root_path %></li>
+    <li><%= link_to "Sign In", new_session_path %></li>
+  </ul>
+</nav>
 <%= yield %>
 </body>
 </html>
