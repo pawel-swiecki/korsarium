@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root "pages#main"
 
+  resources :courses, except: %i[destroy]
   resources :passwords, param: :token
   resource :registration, only: %i[new create]
   resource :session
