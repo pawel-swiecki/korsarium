@@ -33,7 +33,7 @@ class CoursesController < ApplicationController
   end
 
   def destroy
-    @product.destroy
+    @course.destroy
     redirect_to courses_path
   end
 
@@ -43,6 +43,6 @@ class CoursesController < ApplicationController
   end
 
   def course_params
-    params.expect(course: [ :name ])
+    params.expect(course: [ :name, :description ])
   end
 end

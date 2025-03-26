@@ -8,3 +8,30 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    margin: 0 auto;
+    border: 1px solid;
+    border-radius: 32px;
+}
+
+.nav__left {
+}
+
+.nav__center {
+}
+
+.nav__right {
+}
+
+.nav__link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.centered {
+    text-align: center;
+}

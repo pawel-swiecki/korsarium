@@ -1,11 +1,17 @@
-<h1>Welcome to the Korsarium!</h1>
-<h2>Select a course below to begin</h2>
+
+<%= content_tag :header, class: "centered" do %>
+  <%= content_tag :h1, "Welcome to the Korsarium" %>
+  <%= content_tag :h2, "Select a course below to begin" %>
+<% end %>
 
 <div id="courses">
   <% @courses.each do |course| %>
-    <div>
-        <%= link_to course.name, course %>
-    </div>
+    <%= link_to course do %>
+        <div>
+          <%= course.name %>
+          <%= course.description %>
+        </div>
+    <% end %>
   <% end %>
 </div>
 

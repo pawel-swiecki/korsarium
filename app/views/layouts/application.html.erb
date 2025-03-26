@@ -19,14 +19,24 @@
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap", media: "all", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <nav>
-      <%=link_to "Korsarium", courses_path%>
-      <%=link_to "Log Out", session_path, method: :delete if authenticated? %>
-    </nav>
+  <%= content_tag :nav, class: "nav" do %>
+    <%= content_tag :div, class: "nav__left" do %>
+    LogoPlaceholder
+    <% end %>
+
+    <%= content_tag :div, class: "nav__center" do %>
+      <%= link_to "Korsarium", courses_path, class: "nav__link" %>
+    <% end %>
+
+    <%= content_tag :div, class: "nav__right" do %>
+      <%= link_to "Log Out", session_path, method: :delete, class: "nav__link" %>
+    <% end %>
+  <% end %>
 
     <main>
       <%= yield %>
