@@ -1,2 +1,13 @@
 <h1>Welcome to the Korsarium!</h1>
 <h2>Select a course below to begin</h2>
+
+<div id="courses">
+  <% @courses.each do |course| %>
+    <div>
+        <%= link_to course.name, course %>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to "New Course", new_course_path %>
+
