@@ -9,29 +9,107 @@
  * Consider organizing styles into separate files for maintainability.
  */
 
-.nav {
+
+/* --------------- Layout Blocks -------------- */
+.stack {
+    margin-top: 48px;
     display: flex;
+    flex-direction: column;
+}
+
+.stack--horizontal {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.stack--centered {
+    text-align: center;
+}
+
+.card-table {
+    margin-top: 48px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+/* --------------- Standard Blocks ------------ */
+.main-nav {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    padding: 16px;
-    margin: 0 auto;
-    border: 1px solid;
-    border-radius: 32px;
 }
 
-.nav__left {
+.main-nav__list {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.nav__center {
+.main-nav__item {
+    display: flex;
+    gap: 48px;
 }
 
-.nav__right {
-}
-
-.nav__link {
+.main-nav__link {
+    border: none;
     color: inherit;
+    background-color: inherit;
     text-decoration: none;
 }
 
-.centered {
+.card {
+    width: 300px;
+    padding: 32px;
+    border: 1px solid;
+    border-radius: 100%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.card__header {
+
+}
+
+.card__figure {
+
+}
+
+.card__image {
+
+}
+
+.card__body {
+
+}
+
+.card__title {
+
+}
+
+.card__subtitle {
+
+}
+
+.card__copy {
+
+}
+
+.card__footer {
+
+}
+
+.card__actions {
+}
+
+.card__link {
+
+}
+
+/* ---------------- Form Blocks --------------- */
+

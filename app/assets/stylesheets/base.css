@@ -1,6 +1,6 @@
 body {
     font-family: "nunito", sans-serif;
-    max-width: 1400px;
+    max-width: 1500px;
+    padding: 64px;
     margin: 0 auto;
-    padding: 32px;
 }

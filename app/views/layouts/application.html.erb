@@ -24,19 +24,21 @@
   </head>
 
   <body>
-  <%= content_tag :nav, class: "nav" do %>
-    <%= content_tag :div, class: "nav__left" do %>
-    LogoPlaceholder
-    <% end %>
+    <nav class="main-nav">
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <img class="main-nav__link" src="#" alt="#">
+        </li>
+      </ul>
 
-    <%= content_tag :div, class: "nav__center" do %>
-      <%= link_to "Korsarium", courses_path, class: "nav__link" %>
-    <% end %>
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <%= link_to "Korsarium", courses_path, class: "main-nav__link"%>
+          <%= button_to "Log Out", session_path, method: :delete, class: "main-nav__link" %>
+        </li>
+      </ul>
+    </nav>
 
-    <%= content_tag :div, class: "nav__right" do %>
-      <%= link_to "Log Out", session_path, method: :delete, class: "nav__link" %>
-    <% end %>
-  <% end %>
 
     <main>
       <%= yield %>
