@@ -1,4 +1,4 @@
 class Course < ApplicationRecord
   validates :name, presence: true
-  has_rich_text :description
+  validates :description, presence: true
 end
