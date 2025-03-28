@@ -6,7 +6,7 @@
 </header>
 
 <div class="stack">
-  <h2 class="stack stack--centered">Start learning by selecting a course below!</h2>
+  <h2 class="stack stack--centered">Select a course below!</h2>
 
   <div class="card-table">
     <% @courses.each do |course| %>
@@ -21,9 +21,6 @@
           <h2 class="card__title">
             <%= course.name %>
           </h2>
-          <h3 class="card__subtitle">
-            Subtitle Placeholder
-          </h3>
           <p class="card__copy">
             <%= course.description %>
           </p>
@@ -48,9 +45,6 @@
         <h2 class="card__title">
           New Course
         </h2>
-        <h3 class="card__subtitle">
-          Subtitle Placeholder
-        </h3>
         <p class="card__copy">
           Create your own course!
         </p>
