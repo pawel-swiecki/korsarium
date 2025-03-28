@@ -4,13 +4,13 @@
 #
 # This file is the source Rails uses to define your schema when running `bin/rails
 # db:schema:load`. When creating a new database, `bin/rails db:schema:load` tends to
-# be faster and is potentially less error prone than running all of your
+# be faster and is potentially less error-prone than running all of your
 # migrations from scratch. Old migrations may fail to apply correctly if those
 # migrations use external dependencies or application code.
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_03_27_191007) do
+ActiveRecord::Schema[8.0].define(version: 2025_03_28_185830) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -40,10 +40,11 @@ ActiveRecord::Schema[8.0].define(version: 2025_03_27_191007) do
   end
 
   create_table "courses", force: :cascade do |t|
-    t.string "name"
+    t.string "title"
+    t.string "subtitle"
+    t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "description"
   end
 
   create_table "sessions", force: :cascade do |t|

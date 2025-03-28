@@ -1,4 +1,5 @@
 class Course < ApplicationRecord
-  validates :name, presence: true
+  validates :title, presence: true
+  validates :subtitle, presence: true
   validates :description, presence: true
 end
