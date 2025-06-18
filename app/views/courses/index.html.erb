@@ -1,66 +1,37 @@
 <header class="stack stack--centered">
   <h1>Korsarium</h1>
-  <span>/koːrser.i.əm/</span>
-  <em>noun</em>
-  <p>a place specified for courses</p>
+  <h2>/koːrser.i.əm/</h2>
+  <h3><em>noun</em></h3>
+  <span>a place specified for courses</span>
 </header>
 
-<div class="stack">
-  <h2 class="stack stack--centered">Select a course below!</h2>
-
+<section class="stack stack--centered">
   <div class="card-table">
     <% @courses.each do |course| %>
-      <article class="card">
+      <div class="card">
         <div class="card__header">
-          <figure class="card__figure">
             <img class="card__image" src="#" alt="#">
-          </figure>
         </div>
 
         <div class="card__body">
-          <h2 class="card__title">
-            <%= course.title %>
-          </h2>
-          <p class="card__copy">
-            <%= course.description %>
-          </p>
+          <h1 class="card__title"> <%= course.title %> </h1>
+          <p class="card__subtitle"> <%= course.description %> </p>
         </div>
 
         <footer class="card__footer">
-          <div class="card__actions">
-              <%= link_to "Select Course", course_path(course), class: "card__link" %>
+          <div class="card__item">
+              <%= link_to "Enter Course", course_path, class: "card__link" %>
+          </div>
+
+          <div>
+            <%= link_to "Edit", edit_course_path, class: "card__link" %>
           </div>
         </footer>
-      </article>
+      </div>
     <% end %>
-
-    <article class="card">
-      <div class="card__header">
-        <figure class="card__figure">
-          <img class="card__image" src="#" alt="#">
-        </figure>
-      </div>
-
-      <div class="card__body">
-        <h2 class="card__title">
-          New Course
-        </h2>
-        <p class="card__copy">
-          Create your own course!
-        </p>
-      </div>
-
-      <footer class="card__footer">
-        <div class="card__actions">
-          <%= link_to "Create a New Course", new_course_path, class: "card__link" %>
-        </div>
-      </footer>
-    </article>
   </div>
 
-
+  <div>
+    <%= link_to "Create a New Course", new_course_path, class: "card__link" %>
+  </div>
 </div>
-
-
-
-
