@@ -49,6 +49,14 @@
     text-decoration: none;
 }
 
+.courses-nav {
+    margin: 0 36px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+}
+
 /* --------------- Cards ------------ */
 .card-table {
     max-width: 1500px;
