@@ -20,11 +20,11 @@
 
         <footer class="card__footer">
           <div class="card__item">
-              <%= link_to "Enter Course", course_path, class: "card__link" %>
+              <%= link_to "Enter Course", course_path(course), class: "card__link" %>
           </div>
 
           <div>
-            <%= link_to "Edit", edit_course_path, class: "card__link" %>
+            <%= link_to "Edit", edit_course_path(course), class: "card__link" %>
           </div>
         </footer>
       </div>
