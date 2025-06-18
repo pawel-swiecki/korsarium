@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root "pages#main"
+  root "courses#index"
 
   resources :courses
   resources :passwords, param: :token
