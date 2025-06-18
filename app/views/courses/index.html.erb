@@ -10,7 +10,7 @@
     <% @courses.each do |course| %>
       <div class="card">
         <div class="card__header">
-            <img class="card__image" src="#" alt="#">
+          <%= image_tag course.course_icon if course.course_icon.attached? %>
         </div>
 
         <div class="card__body">
