@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root "courses#index"
 
-  resources :courses
+  resources :courses, except: %i[new create]
   resources :passwords, param: :token
   resource :registration, only: %i[new create]
   resource :session

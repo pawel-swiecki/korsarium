@@ -8,19 +8,6 @@ class CoursesController < ApplicationController
   def show
   end
 
-  def new
-    @course = Course.new
-  end
-
-  def create
-    @course = Course.new(course_params)
-    if @course.save
-      redirect_to @course
-    else
-      render :new, status: :unprocessable_entity
-    end
-  end
-
   def edit
   end
 
