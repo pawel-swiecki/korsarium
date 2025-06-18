@@ -48,7 +48,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_03_29_141557) do
   end
 
   create_table "libraries", force: :cascade do |t|
-    t.integer "course_id", null: false
+    t.string "course_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
