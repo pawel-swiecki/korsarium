@@ -74,6 +74,7 @@
 }
 
 .card__body {
+    text-align: center;
     padding: 16px 0 0;
     display: flex;
     flex-direction: column;
