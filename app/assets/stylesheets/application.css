@@ -10,34 +10,28 @@
  */
 
 
-/* --------------- Layout Blocks -------------- */
+/* --------------- Layouts -------------- */
 .stack {
-    margin-top: 48px;
+    margin: 32px 0 0;
     display: flex;
     flex-direction: column;
 }
 
-.stack--horizontal {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 24px;
-}
-
 .stack--centered {
-    text-align: center;
+    align-items: center;
 }
 
 .card-table {
-    margin-top: 48px;
+    max-width: 1500px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 24px;
+    justify-content: space-around;
+    gap: 48px;
 }
 
-/* --------------- Standard Blocks ------------ */
+/* --------------- Navs ------------ */
 .main-nav {
+    margin: 0 36px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -45,13 +39,15 @@
 
 .main-nav__list {
     padding: 0;
+    list-style-type: none;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .main-nav__item {
-    display: flex;
-    gap: 48px;
+    padding: 8px;
+    margin: 8px;
 }
 
 .main-nav__link {
@@ -73,40 +69,8 @@
     align-items: center;
 }
 
-.card__header {
-
-}
-
-.card__figure {
-
-}
-
-.card__image {
-
-}
-
-.card__body {
-
-}
-
-.card__title {
-
-}
-
-.card__copy {
-
-}
-
-.card__footer {
-
-}
-
 .card__actions {
     padding-top: 8px;
-}
-
-.card__link {
-
 }
 
 /* ---------------- Form Blocks --------------- */
