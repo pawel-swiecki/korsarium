@@ -43,6 +43,6 @@ class CoursesController < ApplicationController
   end
 
   def course_params
-    params.expect(course: [ :name, :description ])
+    params.expect(course: [ :name, :subtitle ])
   end
 end
