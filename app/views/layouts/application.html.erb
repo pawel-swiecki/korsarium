@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title><%= content_for(:title) || "Korsarium" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -19,26 +19,24 @@
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
-    <%= stylesheet_link_tag "https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap", media: "all", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap",
+                          media: "all",
+                          "data-turbo-track": "reload"
+    %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
     <nav class="main-nav">
       <ul class="main-nav__list">
-        <li class="main-nav__item">
-          <img class="main-nav__link" src="#" alt="#">
-        </li>
+        <li class="main-nav__item"><%= link_to "Korsarium", courses_path, class:"main-nav__link" %></li>
       </ul>
 
       <ul class="main-nav__list">
-        <li class="main-nav__item">
-          <%= link_to "Korsarium", courses_path, class: "main-nav__link"%>
-          <%= button_to "Log Out", session_path, method: :delete, class: "main-nav__link" %>
-        </li>
+        <li class="main-nav__item"><%= link_to "Korsarium", courses_path, class: "main-nav__link"%></li>
+        <li class="main-nav__item"><%= button_to "Log Out", session_path, method: :delete, class: "main-nav__link" %></li>
       </ul>
     </nav>
-
 
     <main>
       <%= yield %>
