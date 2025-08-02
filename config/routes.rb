@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get "/pages", to: "pages#main"
 
-  resources :courses, except: %i[new create]
+  resources :courses
   resources :passwords, param: :token
   resource :registration, only: %i[new create]
   resource :session
