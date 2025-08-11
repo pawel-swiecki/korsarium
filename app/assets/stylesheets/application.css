@@ -1,5 +1,5 @@
 /*
-* CUBE CSS Architecture for Rails with Propshaft (Simplified)
+* CUBE CSS Architecture for Rails with Propshaft
 * This is the main manifest file that imports all CSS in the correct order
 *
 * Order matters for the cascade:
@@ -17,7 +17,7 @@
     *= require global/reset
     *= require global/fonts
 
-  *Design tokes as CSS custom properties
+  *CSS custom properties
     *= require global/custom_properties
 
   *Global styling
