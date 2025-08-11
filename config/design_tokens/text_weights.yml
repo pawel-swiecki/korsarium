@@ -1,0 +1,7 @@
+# Text weights - exact names
+title: "Text Weights"
+description: "Helper classes and custom properties for common font weights"
+items:
+  Regular: 400
+  Medium: 500
+  Bold: 700

@@ -1,33 +1,16 @@
-<header class="stack stack--centered">
+<section>
   <h1>Korsarium</h1>
   <h2>/koːrser.i.əm/</h2>
   <h3><em>noun</em></h3>
   <span>a place specified for courses</span>
-</header>
+</section>
 
-<section class="stack stack--centered">
-  <div class="card-table">
-    <% @courses.each do |course| %>
-      <div class="card">
-        <div class="card__header">
-          <%= image_tag course.course_icon if course.course_icon.attached? %>
-        </div>
-
-        <div class="card__body">
-          <h1 class="card__title"> <%= course.title %> </h1>
-          <p class="card__subtitle"> <%= course.subtitle %> </p>
-        </div>
-
-        <footer class="card__footer">
-          <div class="card__item">
-              <%= link_to "Enter Course", course_path(course), class: "card__link" %>
-          </div>
-
-          <div class="card__item">
-            <%= link_to "Edit", edit_course_path(course), class: "card__link" %>
-          </div>
-        </footer>
-      </div>
-    <% end %>
-  </div>
+<section>
+  <% @courses.each do |course| %>
+    <%= image_tag course.course_icon if course.course_icon.attached? %>
+    <h1> <%= course.title %> </h1>
+    <p> <%= course.subtitle %> </p>
+    <%= link_to "Enter Course", course_path(course) %>
+    <%= link_to "Edit", edit_course_path(course) %>
+  <% end %>
 </section>

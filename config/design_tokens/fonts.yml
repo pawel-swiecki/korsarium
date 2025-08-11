@@ -1,0 +1,5 @@
+# Font family - as an array
+title: "Fonts"
+description: "Each array of fonts creates a priority-based order. The first font in the array should be the ideal font, followed by sensible, web-safe fallbacks"
+items:
+  Base: ["Inter", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif"]

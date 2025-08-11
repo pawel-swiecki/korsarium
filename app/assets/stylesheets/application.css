@@ -1,122 +1,29 @@
 /*
- * This is a manifest file that'll be compiled into application.css.
- *
- * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
- * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
- * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
- * depending on specificity.
- *
- * Consider organizing styles into separate files for maintainability.
- */
+* CUBE CSS Architecture for Rails
+* This is the main manifest file that imports all CSS in the correct order
+* 
+* Order matters for the cascade:
+* 1. Reset and base styles
+* 2. Design tokens and variables
+* 3. Global styles
+* 4. Generated utilities
+* 5. Compositions (layout patterns)
+* 6. Blocks (components)
+* 7. Utility classes (overrides)
+*/
 
+/* Base styles */
+@import "reset.css";
+@import "fonts.css";
+@import "variables.css.erb";
+@import "global_styles.css";
 
-/* --------------- Layouts -------------- */
-.stack {
-    margin: 32px 0 0;
-    display: flex;
-    flex-direction: column;
-}
+/* Generated from design tokens */
+@import "generated/utilities.css";
 
-.stack--centered {
-    align-items: center;
-}
-
-/* --------------- Navs ------------ */
-.main-nav {
-    margin: 0 36px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.main-nav__list {
-    padding: 0;
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.main-nav__item {
-    padding: 8px;
-    margin: 8px;
-}
-
-.main-nav__link {
-    border: none;
-    color: inherit;
-    background-color: inherit;
-    text-decoration: none;
-}
-
-.courses-nav {
-    margin: 0 36px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 32px;
-}
-
-/* --------------- Cards ------------ */
-.card-table {
-    max-width: 1500px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.card {
-    max-width: 350px;
-    padding: 16px 24px;
-    border: 4px solid black;
-    border-radius: 16px;
-    margin: 24px 24px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.card__header {
-    padding: 16px 0 0;
-    width: 150px;
-}
-
-.card__body {
-    text-align: center;
-    padding: 16px 0 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.card__title {
-    font-size: 32px;
-}
-
-.card__subtitle {
-    font-size: 20px;
-    padding: 16px 0 0;
-}
-
-.card__footer {
-    padding: 16px 0 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.card__item {
-    text-align: center;
-    padding: 4px 16px;
-    margin: 4px;
-    border: 2px solid black;
-    border-radius: 50px;
-    width: 175px;
-}
-
-.card__link {
-    text-decoration: none;
-}
-
-/* ---------------- Form Blocks --------------- */
-
+/* CUBE CSS Architecture - auto-import all files in each directory */
+/*
+*= require_tree ./compositions
+*= require_tree ./blocks
+*= require_tree ./utilities
+*/

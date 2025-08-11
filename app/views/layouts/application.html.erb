@@ -19,24 +19,22 @@
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
-    <%= stylesheet_link_tag "https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap",
-                          media: "all",
-                          "data-turbo-track": "reload"
-    %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <nav class="main-nav">
-      <ul class="main-nav__list">
-        <li class="main-nav__item"><%= link_to "Korsarium", root_path, class:"main-nav__link" %></li>
-      </ul>
+    <header>
+      <nav>
+        <ul>
+          <li><%= link_to "Korsarium", root_path %></li>
+        </ul>
 
-      <ul class="main-nav__list">
-        <li class="main-nav__item"><%= link_to "Courses", courses_path, class: "main-nav__link"%></li>
-        <li class="main-nav__item"><%= button_to "Log Out", session_path, method: :delete, class: "main-nav__link" %></li>
-      </ul>
-    </nav>
+        <ul>
+          <li><%= link_to "Courses", courses_path %></li>
+          <li><%= button_to "Log Out", session_path, method: :delete %></li>
+        </ul>
+      </nav>
+    </header>
 
     <main>
       <%= yield %>

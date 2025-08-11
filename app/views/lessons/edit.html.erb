@@ -1,0 +1,6 @@
+<%= turbo_frame_tag "lesson" do %>
+  <h1>Edit Lesson</h1>
+
+  <%= render "form", lesson: @lesson %>
+  <%= link_to "Cancel", @lesson %>
+<% end %>
