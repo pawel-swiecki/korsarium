@@ -1,0 +1,15 @@
+<%= turbo_frame_tag "lessons" do %>
+  <aside>
+    <h3>Lessons</h3>
+
+    <ul>
+      <% @lessons.each do |lesson| %>
+        <li><%= link_to lesson.title, lesson, data: {turbo_frame: "lesson"} %></li>
+      <% end %>
+    </ul>
+
+    <%= link_to "New Lesson", new_lesson_path, data: {turbo_frame: "lesson"} %>
+  </aside>
+
+  <%= turbo_frame_tag "lesson", src: lesson_path(@selected_lesson) %>
+<% end %>

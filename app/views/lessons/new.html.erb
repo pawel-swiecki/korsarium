@@ -1,0 +1,6 @@
+<%= turbo_frame_tag "lesson" do %>
+  <h1>New Lesson</h1>
+
+  <%= render "form", lesson: @lesson %>
+  <%= link_to "Cancel", lessons_path, data: {turbo_frame: "lessons"} %>
+<% end %>

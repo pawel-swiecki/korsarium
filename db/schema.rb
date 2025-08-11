@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_03_28_185830) do
+ActiveRecord::Schema[8.0].define(version: 2025_08_02_131537) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -47,6 +47,31 @@ ActiveRecord::Schema[8.0].define(version: 2025_03_28_185830) do
     t.string "subtitle"
   end
 
+  create_table "lessons", force: :cascade do |t|
+    t.string "title"
+    t.text "introduction"
+    t.text "body"
+    t.text "summary"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "levels", force: :cascade do |t|
+    t.string "difficulty"
+    t.integer "course_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_levels_on_course_id"
+  end
+
+  create_table "libraries", force: :cascade do |t|
+    t.string "title"
+    t.integer "level_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["level_id"], name: "index_libraries_on_level_id"
+  end
+
   create_table "sessions", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "ip_address"
@@ -66,5 +91,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_03_28_185830) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "levels", "courses"
+  add_foreign_key "libraries", "levels"
   add_foreign_key "sessions", "users"
 end
