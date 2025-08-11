@@ -1,8 +1,0 @@
-# Text leading - exact names
-title: "Leading"
-description: "Ratio-based leading/line-height values"
-items:
-  Flat: 1
-  Fine: 1.15
-  Standard: 1.5
-  Loose: 1.7

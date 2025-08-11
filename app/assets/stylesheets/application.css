@@ -1,29 +1,42 @@
 /*
-* CUBE CSS Architecture for Rails
+* CUBE CSS Architecture for Rails with Propshaft (Simplified)
 * This is the main manifest file that imports all CSS in the correct order
-* 
+*
 * Order matters for the cascade:
 * 1. Reset and base styles
-* 2. Design tokens and variables
+* 2. Design tokens (CSS custom properties)
 * 3. Global styles
-* 4. Generated utilities
+* 4. Utility classes
 * 5. Compositions (layout patterns)
 * 6. Blocks (components)
-* 7. Utility classes (overrides)
+* 7. Utility overrides
 */
 
 /* Base styles */
-@import "reset.css";
-@import "fonts.css";
-@import "variables.css.erb";
-@import "global_styles.css";
+@import "global/reset.css";
+@import "global/fonts.css";
 
-/* Generated from design tokens */
-@import "generated/utilities.css";
+/* Design tokens as CSS custom properties */
+@import "global/custom_properties.css";
 
-/* CUBE CSS Architecture - auto-import all files in each directory */
-/*
-*= require_tree ./compositions
-*= require_tree ./blocks
-*= require_tree ./utilities
-*/
+/* Global styles */
+@import "global/styling";
+
+/* Utility classes */
+@import "global/utilities.css";
+
+/* CUBE CSS Architecture - Compositions */
+@import "compositions/cluster.css";
+@import "compositions/flow.css";
+@import "compositions/grid.css";
+@import "compositions/repel.css";
+@import "compositions/sidebar.css";
+@import "compositions/switcher.css";
+@import "compositions/wrapper.css";
+
+/* CUBE CSS Architecture - Blocks */
+@import "blocks/prose.css";
+
+/* CUBE CSS Architecture - Utility overrides */
+@import "utilities/region.css";
+@import "utilities/visually_hidden.css";
