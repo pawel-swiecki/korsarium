@@ -12,31 +12,33 @@
 * 7. Utility overrides
 */
 
-/* Base styles */
-@import "global/reset.css";
-@import "global/fonts.css";
+/*
+  *Base styles
+    *= require global/reset
+    *= require global/fonts
 
-/* Design tokens as CSS custom properties */
-@import "global/custom_properties.css";
+  *Design tokes as CSS custom properties
+    *= require global/custom_properties
 
-/* Global styles */
-@import "global/styling";
+  *Global styling
+    *= require global/styling
 
-/* Utility classes */
-@import "global/utilities.css";
+  *Utility classes
+    *= require global/utilities
 
-/* CUBE CSS Architecture - Compositions */
-@import "compositions/cluster.css";
-@import "compositions/flow.css";
-@import "compositions/grid.css";
-@import "compositions/repel.css";
-@import "compositions/sidebar.css";
-@import "compositions/switcher.css";
-@import "compositions/wrapper.css";
+  *CUBE CSS - Compositions
+    *= require compositions/cluster
+    *= require compositions/flow
+    *= require compositions/grid
+    *= require compositions/repel
+    *= require compositions/sidebar
+    *= require compositions/switcher
+    *= require compositions/wrapper
 
-/* CUBE CSS Architecture - Blocks */
-@import "blocks/prose.css";
+  *CUBE CSS - Blocks
+    *= require blocks/prose
 
-/* CUBE CSS Architecture - Utility overrides */
-@import "utilities/region.css";
-@import "utilities/visually_hidden.css";
+  *CUBE CSS - Utility Overrides
+    *= require utilities/region
+    *= require utilities/visually_hidden
+*/
