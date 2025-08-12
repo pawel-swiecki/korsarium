@@ -23,7 +23,7 @@
   --space-3xl: clamp(6.75rem, 6.48rem + 1.33vw, 9rem);
   --space-4xl: clamp(9rem, 8.64rem + 1.78vw, 12rem);
   
-  /* Compound spacing (converted from "3XS - 2XS" format to parameterized) */
+  /* Compound spacing */
   --space-3xs-2xs: clamp(0.313rem, 0.22rem + 0.44vw, 0.75rem);
   --space-2xs-xs: clamp(0.563rem, 0.45rem + 0.56vw, 1.125rem);
   --space-xs-s: clamp(0.875rem, 0.76rem + 0.56vw, 1.5rem);
