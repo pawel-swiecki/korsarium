@@ -9,4 +9,5 @@
 /*
   *Base styles
     *= require global/reset
+    *= require global/base
 */
