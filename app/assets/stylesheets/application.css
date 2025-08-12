@@ -4,32 +4,9 @@
 *
 * Order matters for the cascade:
 * 1. Reset and base styles
-* 2. Design tokens (CSS custom properties)
-* 3. Global styles
-* 4. Utility classes
-* 5. Compositions (layout patterns)
-* 6. Blocks (components)
-* 7. Utility overrides
 */
 
 /*
   *Base styles
     *= require global/reset
-
-  *CSS Variables
-    *= require global/variables
-
-  *Global styling
-    *= require global/base
-
-  *CUBE CSS - Compositions
-    *= require compositions/cluster
-    *= require compositions/flow
-    *= require compositions/grid
-    *= require compositions/repel
-    *= require compositions/sidebar
-    *= require compositions/switcher
-    *= require compositions/wrapper
-
-  *CUBE CSS - Blocks
 */
