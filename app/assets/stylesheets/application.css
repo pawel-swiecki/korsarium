@@ -15,16 +15,12 @@
 /*
   *Base styles
     *= require global/reset
-    *= require global/fonts
 
-  *CSS custom properties
-    *= require global/custom_properties
+  *CSS Variables
+    *= require global/variables
 
   *Global styling
-    *= require global/styling
-
-  *Utility classes
-    *= require global/utilities
+    *= require global/base
 
   *CUBE CSS - Compositions
     *= require compositions/cluster
@@ -36,9 +32,4 @@
     *= require compositions/wrapper
 
   *CUBE CSS - Blocks
-    *= require blocks/prose
-
-  *CUBE CSS - Utility Overrides
-    *= require utilities/region
-    *= require utilities/visually_hidden
 */
