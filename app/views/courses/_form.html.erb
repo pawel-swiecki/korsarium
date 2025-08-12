@@ -1,6 +1,6 @@
 <%= form_with model: course do |form| %>
   <div>
-    <%= form.label :course_icon, style: "display: block" %>
+    <%= form.label :course_icon %>
     <%= form.file_field :course_icon, accept: "image/*" %>
   </div>
   <div>
@@ -9,7 +9,7 @@
   </div>
 
   <div>
-    <%= form.label :subtitle, style: "display: block" %>
+    <%= form.label :subtitle %>
     <%= form.text_area :subtitle, size: "50x1" %>
   </div>
 
