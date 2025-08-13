@@ -1,12 +1,25 @@
-<h1>Korsarium</h1>
-<p>/koːrser.i.əm/</p>
-<p><em>noun</em></p>
-<p>a place specified for courses</p>
+<header class="header">
+  <h1>Korsarium</h1>
+  <p>/koːrser.i.əm/</p>
+  <p><em>noun</em></p>
+  <p>a place specified for courses</p>
+</header>
 
-<% @courses.each do |course| %>
-  <%= image_tag course.course_icon if course.course_icon.attached? %>
-  <h1> <%= course.title %> </h1>
-  <p> <%= course.subtitle %> </p>
-  <%= link_to "Enter Course", course_path(course) %>
-  <%= link_to "Edit", edit_course_path(course) %>
-<% end %>
+<section class="card-table">
+  <% @courses.each do |course| %>
+    <div class="card">
+      <div class="card__header">
+        <%= image_tag course.course_icon if course.course_icon.attached? %>
+      </div>
+
+      <div class="card__body">
+        <h2> <%= course.title %> </h2>
+        <p> <%= course.subtitle %> </p>
+      </div>
+
+      <div class="card__footer">
+        <%= link_to "Enter", course_path(course), class: "card__button" %>
+      </div>
+    </div>
+  <% end %>
+</section>
