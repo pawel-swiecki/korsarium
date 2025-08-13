@@ -7,7 +7,7 @@
 .nav__container {
   max-width: 700px;
   padding: 16px 32px;
-  border: 1px dashed black;
+  border: 2px dashed black;
   border-radius: 48px;
   display: flex;
 }
