@@ -10,4 +10,7 @@
   *Base styles
     *= require global/reset
     *= require global/base
+
+  *Blocks
+    *= require nav.css
 */
