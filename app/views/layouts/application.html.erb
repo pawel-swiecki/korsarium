@@ -23,15 +23,19 @@
   </head>
 
   <body>
-    <header>
-      <nav>
-        <%= link_to "Korsarium", root_path %>
-        <%= link_to "Courses", courses_path %>
-        <%= button_to "Log Out", session_path, method: :delete %>
-      </nav>
-    </header>
+    <nav class="nav">
+      <div class="nav__container">
+        <div class="nav__content">
+          <%= link_to "Korsarium", root_path, class: "nav__link" %>
 
-    <main>
+          <ul class="nav__list">
+            <li><%= link_to "Courses", courses_path, class: "nav__button" %></li>
+            <li><%= button_to "Log Out", session_path, method: :delete, class: "nav__button" %></li>
+          </ul>
+      </div>
+    </nav>
+
+    <main class="bumper">
       <%= yield %>
     </main>
   </body>
