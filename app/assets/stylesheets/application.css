@@ -12,7 +12,8 @@
     *= require global/base
 
   *Blocks
-    *= require nav.css
+    *= require blocks/nav.css
+    *= require blocks/card.css
 */
 
 .bumper {
