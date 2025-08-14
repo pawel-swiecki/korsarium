@@ -1,15 +1,14 @@
 <%= turbo_frame_tag "lesson" do %>
-  <h1><%= @lesson.title %></h1>
+  <section>
+    <h1 class="header"><%= @lesson.title %></h1>
 
-  <h1>Introduction</h1>
-  <%= @lesson.introduction %>
+    <h2 class="header">Introduction</h2>
+    <p class="prose prose--centered"><%= @lesson.introduction %></p>
 
-  <h1>Body</h1>
-  <%= @lesson.body %>
+    <h2 class="header">Body</h2>
+    <p class="prose prose--centered"><%= @lesson.body %></p>
 
-  <h1>Summary</h1>
-  <%= @lesson.summary %>
-
-  <%= link_to "Edit", edit_lesson_path(@lesson) %>
-  <%= button_to "Delete", @lesson, method: :delete, data: {turbo_frame: "lessons", turbo_confirm: "Are you sure you want to delete this lesson?"} %>
+    <h2 class="header">Summary</h2>
+    <p class="prose prose--centered"><%= @lesson.summary %></p>
+  </section>
 <% end %>

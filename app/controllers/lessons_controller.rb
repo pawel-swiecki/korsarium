@@ -44,6 +44,6 @@ class LessonsController < ApplicationController
   private
 
   def lesson_params
-    params.expect(lesson: [:title, :introduction, :body, :summary])
+    params.expect(lesson: [ :title, :introduction, :body, :summary ])
   end
 end
