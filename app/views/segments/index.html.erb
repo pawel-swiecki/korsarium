@@ -1,17 +1,11 @@
 <%= turbo_frame_tag "segments" do %>
-  <nav class="nav">
-    <div class="nav__container">
-      <div class="nav__content--segments">
-        <h3><u>Segments</u></h3>
+  <h3><u>Segments</u></h3>
 
-        <ul class="nav__list nav__list--segments">
-          <% @segments.each do |segment| %>
-            <li><%= link_to segment.title, segment, class: "nav__button", data: {turbo_frame: "segment"} %></li>
-          <% end %>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <ul>
+    <% @segments.each do |segment| %>
+      <li><%= link_to segment.title, segment, data: {turbo_frame: "segment"} %></li>
+    <% end %>
+  </ul>
 
   <%= turbo_frame_tag "segment", src: segment_path(@selected_segment) %>
 <% end %>
