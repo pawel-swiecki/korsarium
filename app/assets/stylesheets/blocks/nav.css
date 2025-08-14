@@ -1,7 +1,8 @@
 .nav {
+  margin: 8px 0;
+  width: 100%;
   display: flex;
   justify-content: center;
-  width: 100%;
 }
 
 .nav__container {
@@ -17,6 +18,21 @@
   justify-content: space-between;
   align-items: center;
   gap: 48px;
+  flex-wrap: wrap;
+}
+
+.nav__content--lessons {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.nav__content > h1, h2, h3, h4, p {
+  margin:0
 }
 
 .nav__list {
@@ -26,6 +42,12 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav__list--lessons {
+  flex-direction: column;
 }
 
 .nav__link {
