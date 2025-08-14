@@ -1,6 +1,7 @@
 class LessonsController < ApplicationController
   def index
-    @lessons = Lesson.all
+    @segment = Segment.find(params[:segment_id])
+    @lessons = Lesson.where(segment_id: @segment)
     @selected_lesson = Lesson.find_by(id: params[:lesson_id]) || @lessons.first
   end
 
