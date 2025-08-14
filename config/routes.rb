@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get "/pages", to: "pages#main"
 
   resources :courses
+  resources :segments
   resources :lessons
   resources :passwords, param: :token
   resource :registration, only: %i[new create]
