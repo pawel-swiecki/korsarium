@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_08_02_131537) do
+ActiveRecord::Schema[8.0].define(version: 2025_08_14_161605) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -54,6 +54,8 @@ ActiveRecord::Schema[8.0].define(version: 2025_08_02_131537) do
     t.text "summary"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "segment_id"
+    t.index ["segment_id"], name: "index_lessons_on_segment_id"
   end
 
   create_table "levels", force: :cascade do |t|
@@ -70,6 +72,12 @@ ActiveRecord::Schema[8.0].define(version: 2025_08_02_131537) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["level_id"], name: "index_libraries_on_level_id"
+  end
+
+  create_table "segments", force: :cascade do |t|
+    t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "sessions", force: :cascade do |t|
@@ -91,6 +99,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_08_02_131537) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "lessons", "segments"
   add_foreign_key "levels", "courses"
   add_foreign_key "libraries", "levels"
   add_foreign_key "sessions", "users"
