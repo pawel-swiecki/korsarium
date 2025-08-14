@@ -18,12 +18,24 @@
 
 .bumper {
   padding: 0 16px;
+  max-width: 1000px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .header {
   text-align: center;
   display: flex;
   flex-direction: column;
+  margin: 16px;
+}
+
+.prose {
+  max-width: 800px;
+}
+
+.prose--centered {
+  text-algin: center
 }
