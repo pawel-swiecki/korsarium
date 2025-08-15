@@ -5,21 +5,13 @@
   <p>a place specified for courses</p>
 </header>
 
-<section class="card-table">
+<section>
   <% @courses.each do |course| %>
-    <div class="card">
-      <div class="card__header">
-        <%= image_tag course.course_icon if course.course_icon.attached? %>
-      </div>
+    <%= image_tag course.course_icon if course.course_icon.attached? %>
 
-      <div class="card__body">
-        <h2> <%= course.title %> </h2>
-        <p> <%= course.subtitle %> </p>
-      </div>
+    <h2> <%= course.title %> </h2>
+    <p> <%= course.subtitle %> </p>
 
-      <div class="card__footer">
-        <%= link_to "Enter", course_path(course), class: "card__button" %>
-      </div>
-    </div>
+    <%= link_to "Enter", course_path(course) %>
   <% end %>
 </section>
