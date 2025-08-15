@@ -4,9 +4,12 @@ Rails.application.routes.draw do
   get "/pages", to: "pages#main"
 
   resources :courses
-  resources :segments do
-    resources :lessons, shallow: true
+  resources :levels, shallow: true do
+    resources :segments, shallow: true do
+      resources :lessons, shallow: true
+    end
   end
+
   resources :passwords, param: :token
   resource :registration, only: %i[new create]
   resource :session
