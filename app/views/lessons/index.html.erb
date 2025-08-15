@@ -1,17 +1,11 @@
 <%= turbo_frame_tag "lessons" do %>
-  <nav class="nav">
-    <div class="nav__container">
-      <div class="nav__content--lessons">
-        <h3><u>Lessons</u></h3>
+  <h3>Lessons</h3>
 
-        <ul class="nav__list nav__list--lessons">
-          <% @lessons.each do |lesson| %>
-            <li><%= link_to lesson.title, lesson, class: "nav__button", data: {turbo_frame: "lesson"} %></li>
-          <% end %>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <ul>
+    <% @lessons.each do |lesson| %>
+      <li><%= link_to lesson.title, lesson, data: {turbo_frame: "lesson"} %></li>
+    <% end %>
+  </ul>
 
   <%= turbo_frame_tag "lesson", src: lesson_path(@selected_lesson) %>
 <% end %>

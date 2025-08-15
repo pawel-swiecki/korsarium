@@ -1,14 +1,14 @@
 <%= turbo_frame_tag "lesson" do %>
   <section>
-    <h1 class="header"><%= @lesson.title %></h1>
+    <h1><%= @lesson.title %></h1>
 
-    <h2 class="header">Introduction</h2>
-    <p class="prose prose--centered"><%= @lesson.introduction %></p>
+    <h2>Introduction</h2>
+    <p><%= @lesson.introduction %></p>
 
-    <h2 class="header">Body</h2>
-    <p class="prose prose--centered"><%= @lesson.body %></p>
+    <h2>Body</h2>
+    <p><%= @lesson.body %></p>
 
-    <h2 class="header">Summary</h2>
-    <p class="prose prose--centered"><%= @lesson.summary %></p>
+    <h2>Summary</h2>
+    <p><%= @lesson.summary %></p>
   </section>
 <% end %>
