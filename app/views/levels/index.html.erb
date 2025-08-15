@@ -1,1 +1,4 @@
-
+<h1>Levels:</h1>
+<% @levels.each do |level| %>
+  <%= link_to level.title, level %>
+<% end %>
