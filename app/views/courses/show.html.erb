@@ -1,1 +1,5 @@
-<h3><%= @course.title %></h3>
+<%= turbo_frame_tag "course" do %>
+  <%= @course.title %>
+
+  <%= turbo_frame_tag "levels", src: course_levels_path(@course) %>
+<% end %>
