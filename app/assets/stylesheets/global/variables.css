@@ -20,6 +20,13 @@
   --font-weight-bold: 700;
   --font-weight-black: 900;
 
+  /*LINE HEIGHTS ======================================================================= */
+  --line-height-micro: 0.85;
+  --line-height-flat: 1;
+  --line-height-fine: 1.2;
+  --line-height-standard: 1.4;
+  --line-height-loose: 1.7;
+
   /* SPACING ================================================================================= */
   /* Individual Space Values */
   --space-3xs: clamp(0.3125rem, 0.3125rem + 0vw, 0.3125rem);
@@ -47,14 +54,6 @@
   --color-dark-glare: #2d2816;
   --color-mid: #ABA9A2;
   --color-light: #ffffff;
-
-
-  /*LINE HEIGHTS ======================================================================= */
-  --line-height-micro: 0.85;
-  --line-height-flat: 1;
-  --line-height-fine: 1.2;
-  --line-height-standard: 1.4;
-  --line-height-loose: 1.7;
 
   /* BREAKPOINTS ============================================================================ */
   --breakpoint-s: 330px;
