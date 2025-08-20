@@ -7,8 +7,8 @@
 */
 
 /*
-  *Base styles
     *= require global/reset
     *= require global/variables
     *= require global/global
+    *= require_tree /blocks
 */
