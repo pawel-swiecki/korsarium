@@ -1,5 +1,5 @@
-<%= turbo_frame_tag "course", class: "center" do %>
+<%= turbo_frame_tag "course", class: "container center" do %>
   <h1><%= @course.title %></h1>
 
-  <%= turbo_frame_tag "levels", src: course_levels_path(@course) %>
+  <%= turbo_frame_tag "levels", class: "center", src: course_levels_path(@course) %>
 <% end %>
