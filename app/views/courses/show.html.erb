@@ -1,4 +1,4 @@
-<%= turbo_frame_tag "course" do %>
+<%= turbo_frame_tag "course", class: "center" do %>
   <%= @course.title %>
 
   <%= turbo_frame_tag "levels", src: course_levels_path(@course) %>
