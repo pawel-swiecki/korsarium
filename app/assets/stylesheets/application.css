@@ -10,5 +10,6 @@
     *= require global/reset
     *= require global/variables
     *= require global/global
+    *= require_tree /compositions
     *= require_tree /blocks
 */
