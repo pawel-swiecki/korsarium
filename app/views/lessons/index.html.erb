@@ -3,11 +3,13 @@
     <div class="center stack">
       <h1>Lessons</h1>
 
-      <ul>
-        <% @lessons.each do |lesson| %>
-          <li><%= link_to lesson.title, lesson, data: {turbo_frame: "lesson"} %></li>
-        <% end %>
-      </ul>
+      <nav class="nav">
+        <ul class="stack" role="list">
+          <% @lessons.each do |lesson| %>
+            <li><%= link_to lesson.title, lesson, data: {turbo_frame: "lesson"} %></li>
+          <% end %>
+        </ul>
+      </nav>
     </div>
 
     <%= turbo_frame_tag "lesson", class: "stack prose center", src: lesson_path(@selected_lesson) %>
