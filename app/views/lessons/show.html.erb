@@ -1,6 +1,5 @@
-<%= turbo_frame_tag "lesson", class:"center" do %>
-  <section class="stack prose">
-    <h1 class="center"><%= @lesson.title %></h1>
+<%= turbo_frame_tag "lesson", class:"stach prose center" do %>
+    <h1><%= @lesson.title %></h1>
 
     <h2>Introduction</h2>
     <p><%= @lesson.introduction %></p>
@@ -10,5 +9,4 @@
 
     <h2>Summary</h2>
     <p><%= @lesson.summary %></p>
-  </section>
 <% end %>
