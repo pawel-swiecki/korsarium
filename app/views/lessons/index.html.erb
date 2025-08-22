@@ -11,5 +11,5 @@
     </nav>
   </div>
 
-  <%= turbo_frame_tag "lesson", src: lesson_path(@selected_lesson) %>
+  <%= turbo_frame_tag "lesson", class: "prose", src: lesson_path(@selected_lesson) %>
 <% end %>
