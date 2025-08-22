@@ -2,7 +2,7 @@
   <div>
     <h1>Segments</h1>
 
-    <nav>
+    <nav class="nav">
       <% @segments.each do |segment| %>
         <%= link_to segment.title, segment, data: {turbo_frame: "segment"} %>
       <% end %>
