@@ -9,7 +9,14 @@
 
 .center-row {
   box-sizing: content-box;
+  margin-inline: auto;
+  max-inline-size: var(--measure);
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
+}
+
+.center-row > * {
+  margin: var(--space-s);
 }
