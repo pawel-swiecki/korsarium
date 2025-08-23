@@ -16,7 +16,3 @@
   align-items: center;
   justify-content: center;
 }
-
-.center-row > * {
-  margin: var(--space-s);
-}
