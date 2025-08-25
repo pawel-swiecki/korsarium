@@ -62,7 +62,9 @@
   --breakpoint-xl: 1350px;
 
   /* MEASURES =============================================================================================================== */
-  --measure-s: ;
-  --measure-m: ;
-  --measure-l: ;
+  --measure-xs: 45ch;
+  --measure-s: 55ch;
+  --measure-m: 65ch;
+  --measure-l: 75ch;
+  --measure-xl: 85ch;
 }
