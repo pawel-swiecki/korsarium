@@ -1,0 +1,10 @@
+stack-l {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Fallback spacing when JavaScript is disabled */
+stack-l > * + * {
+  margin-block-start: var(--space-l);
+}

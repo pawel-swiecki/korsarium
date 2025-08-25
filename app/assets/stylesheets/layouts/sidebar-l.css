@@ -1,0 +1,9 @@
+sidebar-l {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-l);
+}
+
+sidebar-l > * {
+  flex-grow: 1;
+}
