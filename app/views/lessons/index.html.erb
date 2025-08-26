@@ -1,11 +1,13 @@
-<%= turbo_frame_tag "lessons" do %>
-  <h3>Lessons</h3>
+<%= turbo_frame_tag "lessons", class: "wrapper sidebar" do %>
+  <div class="wrapper stack">
+    <h1>Lessons</h1>
 
-  <ul>
-    <% @lessons.each do |lesson| %>
-      <li><%= link_to lesson.title, lesson, data: {turbo_frame: "lesson"} %></li>
-    <% end %>
-  </ul>
+    <nav class="nav stack">
+      <% @lessons.each do |lesson| %>
+        <%= link_to lesson.title, lesson, data: {turbo_frame: "lesson"} %>
+      <% end %>
+    </nav>
+  </div>
 
-  <%= turbo_frame_tag "lesson", src: lesson_path(@selected_lesson) %>
+  <%= turbo_frame_tag "lesson", class: "wrapper border center stack prose", src: lesson_path(@selected_lesson) %>
 <% end %>

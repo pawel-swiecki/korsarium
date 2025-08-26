@@ -1,0 +1,146 @@
+:root {
+  --gutter: var(--space-m-l);
+  --transition-base: 250ms ease;
+  --transition-movement: 200ms linear;
+  --transition-fade: 300ms ease;
+  --transition-bounce: 500ms cubic-bezier(0.5, 0.05, 0.2, 1.5);
+  --stroke: 1px dashed var(--color-mid);
+  --stroke-solid: 1px solid var(--color-mid);
+  --radius-s: 0.2rem;
+  --radius-m: 0.75rem;
+  --radius-l: 2.5rem;
+  --uppercase-kerning: 0.04ch;
+}
+
+body {
+  background: var(--color-dark);
+  color: var(--color-primary);
+  font-size: var(--font-size-0);
+  font-family: var(--font-family-base);
+  line-height: var(--line-height-standard);
+  font-size-adjust: from-font;
+  margin: 0;
+}
+
+:is(h1, h2, h3, h4) {
+  line-height: var(--line-height-fine);
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: var(--font-size-4);
+  max-width: 20ch;
+}
+
+h2 {
+  font-size: var(--font-size-3);
+  max-width: 35ch;
+}
+
+h3 {
+  font-size: var(--font-size-2);
+  max-width: 35ch;
+}
+
+:is(h4, h5, h6) {
+  font-size: var(--font-size-1);
+}
+
+ul:not([class]) {
+  padding-inline-start: 1.7ch;
+  list-style-type: disc;
+}
+
+ul:not([class]) > li {
+  padding-inline-start: var(--space-3xs);
+}
+
+:is(ol, ul):not([class]) li + * {
+  margin-block-start: var(--flow-space, var(--space-3xs));
+}
+
+ul ::marker {
+  font-size: 0.8lh;
+}
+
+ol ::marker {
+  font-size: 1em;
+  font-weight: var(--font-weight-bold);
+}
+
+/* Lists with classes and roles will be out of standard flow, so remove the default spacing */
+[role='list'][class],
+[role='tablist'][class] {
+  margin-block: 0;
+  padding: 0;
+}
+
+/* There's a .flow composition, but this prevents forms from having to have that applied where markup is harder to control in certain systems. It still uses the --flow-space variables though to make managing space easier */
+form > * + * {
+  margin-top: var(--flow-space, 1rem);
+}
+
+:is(input, select, textarea) {
+  accent-color: var(--color-primary);
+}
+
+:is(input:not([type='checkbox'], [type='radio'], [type='color']), select, textarea) {
+  padding: 0.5em 0.8em;
+  border-radius: var(--radius-s);
+  border: var(--stroke-solid);
+  background: var(--color-dark-glare);
+  color: var(--color-light);
+  width: 100%;
+
+  &::placeholder {
+    color: var(--color-mid);
+    opacity: 1;
+  }
+}
+
+label {
+  line-height: var(--line-height-fine);
+  font-weight: var(--font-weight-medium);
+}
+
+label::after {
+  content: '\A';
+  white-space: pre;
+}
+
+/* Usually label wraps checkbox and radio buttons, so we give ourselves more layout and text-flow control with flex */
+label:has(input) {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-s);
+  font-weight: var(--font-weight-normal);
+}
+
+label:has(input) + label:has(input) {
+  --flow-space: var(--space-s-m);
+}
+
+/* Slightly adjusts the vertical position of the check/radio */
+label:has(input) input {
+  transform: translateY(-0.1ex);
+}
+
+input:disabled {
+  background: var(--color-mid);
+}
+
+input:disabled,
+label input:disabled + * {
+  cursor: not-allowed;
+}
+
+fieldset {
+  border: var(--stroke);
+  padding: var(--space-s);
+}
+
+legend {
+  font-weight: var(--font-weight-medium);
+  padding-inline: var(--space-xs);
+}
+

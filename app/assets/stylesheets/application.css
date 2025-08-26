@@ -1,12 +1,21 @@
 /*
-* CUBE CSS Architecture for Rails with Propshaft
-* This is the main manifest file that imports all CSS in the correct order
-*
-* Order matters for the cascade:
-* 1. Reset and base styles
+ * Rails 8 Application Styles with Layout Primitives
+ * Using CUBE CSS methodology
+ *
+ * Load order matters for the cascade:
+ * 1. Reset and base styles
+ * 2. Variables (including layout-specific variables)
+ * 3. Global styles
+ * 4. Layout primitives (custom elements)
+ * 5. Compositions
+ * 6. Blocks (UI components)
 */
 
 /*
-  *Base styles
-    *= require global/reset
+ *= require global/reset
+ *= require global/variables
+ *= require global/global
+ *= require_tree ./layouts
+ *= require_tree ./compositions
+ *= require_tree ./blocks
 */

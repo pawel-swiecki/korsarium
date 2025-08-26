@@ -3,3 +3,7 @@ import "@hotwired/turbo-rails"
 import "controllers"
 
 import "trix"
+
+// Used pin_all_from with preload: true in the importmap.rb file
+// to automatically load and self-register the web components in
+// files in app/javascript/layout_custom_elements/

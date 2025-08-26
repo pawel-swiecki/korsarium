@@ -1,11 +1,13 @@
-<%= turbo_frame_tag "segments" do %>
-  <h3>Segments</h3>
+<%= turbo_frame_tag "segments", class: " wrapper stack center" do %>
+  <div>
+    <h1>Segments</h1>
 
-  <ul>
-    <% @segments.each do |segment| %>
-      <li><%= link_to segment.title, segment, data: {turbo_frame: "segment"} %></li>
-    <% end %>
-  </ul>
+    <nav class="nav">
+      <% @segments.each do |segment| %>
+        <%= link_to segment.title, segment, data: {turbo_frame: "segment"} %>
+      <% end %>
+    </nav>
+  </div>
 
-  <%= turbo_frame_tag "segment", src: segment_path(@selected_segment) %>
+  <%= turbo_frame_tag "lessons", class: "sidebar", src: segment_lessons_path(@selected_segment) %>
 <% end %>
