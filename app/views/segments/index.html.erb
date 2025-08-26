@@ -1,13 +1,13 @@
-<%= turbo_frame_tag "segments", class: " wrapper stack center" do %>
+<%= turbo_frame_tag "segments" do %>
   <div>
     <h1>Segments</h1>
 
-    <nav class="nav">
+    <nav>
       <% @segments.each do |segment| %>
         <%= link_to segment.title, segment, data: {turbo_frame: "segment"} %>
       <% end %>
     </nav>
   </div>
 
-  <%= turbo_frame_tag "lessons", class: "sidebar", src: segment_lessons_path(@selected_segment) %>
+  <%= turbo_frame_tag "lessons", src: segment_lessons_path(@selected_segment) %>
 <% end %>
