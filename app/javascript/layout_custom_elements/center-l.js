@@ -9,7 +9,7 @@ class Center extends HTMLElement {
         styleEl.id = this.i;
         styleEl.innerHTML = `
           [data-i="${this.i}"] {
-            max-width: ${this.max};
+            max-inline-size: ${this.max};
             ${this.gutters ? `
             padding-inline-start: ${this.gutters};
             padding-inline-end: ${this.gutters};`
