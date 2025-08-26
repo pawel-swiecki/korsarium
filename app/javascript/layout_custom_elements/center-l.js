@@ -27,7 +27,7 @@ class Center extends HTMLElement {
     }
   }
 
-  get max() { return this.getAttribute('max') || 'var(--measure)'; }
+  get max() { return this.getAttribute('max') || 'var(--measure-m)'; }
   set max(val) { this.setAttribute('max', val); }
   get andText() { return this.hasAttribute('andText'); }
   set andText(val) { val ? this.setAttribute('andText', '') : this.removeAttribute('andText'); }
