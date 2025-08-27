@@ -1,6 +1,6 @@
-center-l {
+.center {
   display: block;
   box-sizing: content-box;
   margin-inline: auto;
-  max-inline-size: var(--measure, var(--measure-m));
+  max-inline-size: var(--measure, var(--measure-xl));
 }

@@ -1,4 +1,4 @@
-frame-l {
+.frame {
   aspect-ratio: 16 / 9;
   overflow: hidden;
   display: flex;
@@ -6,8 +6,8 @@ frame-l {
   align-items: center;
 }
 
-frame-l > img,
-frame-l > video {
+.frame > img,
+.frame > video {
   inline-size: 100%;
   block-size: 100%;
   object-fit: cover;

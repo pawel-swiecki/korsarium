@@ -6,9 +6,10 @@
  * 1. Reset and base styles
  * 2. Variables (including layout-specific variables)
  * 3. Global styles
- * 4. Layout primitives (custom elements)
- * 5. Compositions
- * 6. Blocks (UI components)
+
+ * 4. Compositions (layouts)
+ * 5. Blocks (UI components)
+ * 6. Utilities (single purpose classes)
 */
 
 /*
@@ -16,7 +17,7 @@
  *= require global/variables
  *= require global/global
 
- *= require_tree ./layouts
  *= require_tree ./compositions
  *= require_tree ./blocks
+ *= require_tree ./utilities
 */

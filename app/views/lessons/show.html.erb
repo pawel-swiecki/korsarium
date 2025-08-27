@@ -1,5 +1,7 @@
-<%= turbo_frame_tag "lesson" do %>
+<%= turbo_frame_tag "lesson", class: "flow prose" do %>
   <h1><%= @lesson.title %></h1>
+
+  <hr>
 
   <h2>Introduction</h2>
   <p><%= @lesson.introduction %></p>
