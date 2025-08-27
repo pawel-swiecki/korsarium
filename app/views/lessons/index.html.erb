@@ -7,7 +7,5 @@
     <% end %>
   </nav>
 
-  <stack-l class="prose">
-    <%= turbo_frame_tag "lesson", src: lesson_path(@selected_lesson) %>
-  </stack-l>
+  <%= turbo_frame_tag "lesson", src: lesson_path(@selected_lesson) %>
 <% end %>
