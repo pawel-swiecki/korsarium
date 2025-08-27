@@ -1,4 +1,4 @@
-grid-l {
+.grid {
   display: grid;
   grid-gap: var(--space-l);
   align-content: start;

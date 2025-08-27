@@ -1,4 +1,4 @@
-box-l {
+.box {
   display: block;
   padding: var(--space-l);
   border-width: var(--border-thin);

@@ -3,6 +3,3 @@ import "@hotwired/turbo-rails"
 import "controllers"
 
 import "trix"
-
-// Auto-load all layout custom elements
-import "layout_custom_elements"
