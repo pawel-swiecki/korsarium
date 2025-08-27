@@ -7,5 +7,5 @@
     <% end %>
   </nav>
 
-  <%= turbo_frame_tag "lesson", src: lesson_path(@selected_lesson) %>
+  <%= turbo_frame_tag "lesson", class: "flow prose", src: lesson_path(@selected_lesson) %>
 <% end %>
