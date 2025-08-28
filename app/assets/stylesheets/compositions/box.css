@@ -1,7 +1,7 @@
 .box {
   display: block;
   padding: var(--space-l);
-  border-width: var(--border-thin);
-  outline: var(--border-thin) solid transparent;
-  outline-offset: calc(var(--border-thin) * -1);
+  border-width: var(--border-width-s);
+  outline: var(--border-width-s) solid transparent;
+  outline-offset: calc(var(--border-wdith-s) * -1);
 }

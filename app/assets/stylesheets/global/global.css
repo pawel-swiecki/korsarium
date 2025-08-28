@@ -6,44 +6,41 @@
   --transition-bounce: 500ms cubic-bezier(0.5, 0.05, 0.2, 1.5);
   --stroke: 1px dashed var(--color-mid);
   --stroke-solid: 1px solid var(--color-mid);
-  --radius-s: 0.2rem;
-  --radius-m: 0.75rem;
-  --radius-l: 2.5rem;
   --uppercase-kerning: 0.04ch;
 }
 
 body {
   background: var(--color-dark);
   color: var(--color-primary);
-  font-size: var(--font-size-0);
+  font-size: var(--font-size-xs);
   font-family: var(--font-family-base);
-  line-height: var(--line-height-standard);
+  line-height: var(--line-height-s);
   font-size-adjust: from-font;
   margin: 0;
 }
 
 :is(h1, h2, h3, h4) {
-  line-height: var(--line-height-fine);
+  line-height: var(--line-height-xs);
   text-wrap: balance;
 }
 
 h1 {
-  font-size: var(--font-size-4);
+  font-size: var(--font-size-xl);
   max-width: 20ch;
 }
 
 h2 {
-  font-size: var(--font-size-3);
+  font-size: var(--font-size-l);
   max-width: 35ch;
 }
 
 h3 {
-  font-size: var(--font-size-2);
+  font-size: var(--font-size-m);
   max-width: 35ch;
 }
 
 :is(h4, h5, h6) {
-  font-size: var(--font-size-1);
+  font-size: var(--font-size-s);
 }
 
 ul:not([class]) {
@@ -75,7 +72,9 @@ ol ::marker {
   padding: 0;
 }
 
-/* There's a .flow composition, but this prevents forms from having to have that applied where markup is harder to control in certain systems. It still uses the --flow-space variables though to make managing space easier */
+/* There's a .flow composition, but this prevents forms from having to have that applied where
+  markup is harder to control in certain systems. It still uses the --flow-space variables
+  though to make managing space easier */
 form > * + * {
   margin-top: var(--flow-space, 1rem);
 }
@@ -86,8 +85,8 @@ form > * + * {
 
 :is(input:not([type='checkbox'], [type='radio'], [type='color']), select, textarea) {
   padding: 0.5em 0.8em;
-  border-radius: var(--radius-s);
   border: var(--stroke-solid);
+  border-radius: var(--border-radius-s);
   background: var(--color-dark-glare);
   color: var(--color-light);
   width: 100%;
@@ -99,7 +98,7 @@ form > * + * {
 }
 
 label {
-  line-height: var(--line-height-fine);
+  line-height: var(--line-height-m);
   font-weight: var(--font-weight-medium);
 }
 
