@@ -41,9 +41,11 @@
   --flow-space: var(--space-xs);
 }
 
-/* Make thematic breaks the largest measure size by default so it'll span
-  across the entire max-inline-size */
+/* Make thematic breaks the most common measure size by default and adjust as 
+  necessary using utility classes to set the --measure */
 .prose hr {
-  max-inline-size: var(--measure, var(--measure-xl))
+  max-inline-size: var(--measure, var(--measure-l));
   --flow-space: var(--space-xl);
+  margin-inline-start: 0;
+  margin-inline-end: 0;
 }
