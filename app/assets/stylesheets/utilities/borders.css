@@ -1,3 +1,4 @@
 .border-standard {
-  border: var(--border-s) solid black;
+  border: var(--border-width-s) solid white;
+  border-radius: var(--border-radius-l);
 }
