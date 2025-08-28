@@ -6,17 +6,17 @@ Utility classes to adjust the layout of the sidebar composition
 */
 
 .sidebar-target-width-xs {
-  --sidebar-target-width: 10em;
+  --sidebar-target-width: 10rem;
 }
 
 .sidebar-target-width-s {
-  --sidebar-target-width: 25em;
+  --sidebar-target-width: 25rem;
 }
 
 .sidebar-target-width-m {
-  --sidebar-target-width: 50em;
+  --sidebar-target-width: 50rem;
 }
 
 .sidebar-target-width-l {
-  --sidebar-target-width: 100em;
+  --sidebar-target-width: 100rem;
 }
