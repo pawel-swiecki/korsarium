@@ -38,6 +38,7 @@
   --space-xl: clamp(3.375rem, 3.2446rem + 0.6522vw, 3.75rem);
   --space-2xl: clamp(4.5rem, 4.3261rem + 0.8696vw, 5rem);
   --space-3xl: clamp(6.75rem, 6.4891rem + 1.3043vw, 7.5rem);
+
   /* Space-Value Pairs */
   --space-3xs-2xs: clamp(0.3125rem, 0.2038rem + 0.5435vw, 0.625rem);
   --space-2xs-xs: clamp(0.5625rem, 0.4321rem + 0.6522vw, 0.9375rem);
@@ -74,10 +75,16 @@
   --border-width-m: 2px;
   --border-width-l: 3px;
   --border-width-xl: 5px;
+
   /* Radii */
   --border-radius-xs: 0.2rem;
   --border-radius-s: 0.75rem;
   --border-radius-m: 1.0rem;
   --border-radius-l: 1.5rem;
   --border-radius-xl: 2.5rem;
+
+  /* INLINE SIZES ========================================================================================================== */
+  --inline-size-s: 25em;
+  --inline-size-m: 50em;
+  --inline-size-l: 75em;
 }
