@@ -7,5 +7,5 @@
     <% end %>
   </nav>
 
-  <%= turbo_frame_tag "lessons", src: segment_lessons_path(@selected_segment) %>
+  <%= turbo_frame_tag "lessons", class:"sidebar", src: segment_lessons_path(@selected_segment) %>
 <% end %>
