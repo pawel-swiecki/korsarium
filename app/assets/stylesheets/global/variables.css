@@ -82,4 +82,9 @@
   --border-radius-m: 1.0rem;
   --border-radius-l: 1.5rem;
   --border-radius-xl: 2.5rem;
+
+  /* INLINE SIZES ========================================================================================================== */
+  --inline-size-s: 25em;
+  --inline-size-m: 50em;
+  --inline-size-l: 75em;
 }
