@@ -1,0 +1,3 @@
+.border-standard {
+  border: var(--border-s) solid black;
+}

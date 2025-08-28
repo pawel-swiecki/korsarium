@@ -4,15 +4,15 @@
   --font-family-mono: "DM Mono", monospace;
 
   /* FONT SIZES ============================================================================================================ */
-  --font-size--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
-  --font-size--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
-  --font-size-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
-  --font-size-1: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
-  --font-size-2: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
-  --font-size-3: clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
-  --font-size-4: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
-  --font-size-5: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
-  --font-size-6: clamp(3.3592rem, 2.8691rem + 2.4507vw, 4.7684rem);
+  --font-size-3xs: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
+  --font-size-2xs: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
+  --font-size-xs: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+  --font-size-s: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
+  --font-size-m: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
+  --font-size-l: clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
+  --font-size-xl: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
+  --font-size-2xl: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
+  --font-size-3xl: clamp(3.3592rem, 2.8691rem + 2.4507vw, 4.7684rem);
 
   /* FONT WEIGHTS ========================================================================================================== */
   --font-weight-regular: 400;
@@ -21,11 +21,11 @@
   --font-weight-black: 900;
 
   /* LINE HEIGHTS ========================================================================================================== */
-  --line-height-micro: 0.85;
-  --line-height-flat: 1;
-  --line-height-fine: 1.2;
-  --line-height-standard: 1.4;
-  --line-height-loose: 1.7;
+  --line-height-xs: 0.85;
+  --line-height-s: 1;
+  --line-height-m: 1.2;
+  --line-height-l: 1.4;
+  --line-height-xl: 1.7;
 
   /* SPACING =============================================================================================================== */
   /* Individual Space Values */
@@ -69,8 +69,13 @@
   --measure-xl: 85ch;
 
   /* BORDERS =============================================================================================================== */
-  --border-regular: 1px;
-  --border-medium: 2px;
-  --border-bold: 3px;
-  --border-black: 5px;
+  /* Widths */
+  --border-width-s: 1px;
+  --border-width-m: 2px;
+  --border-width-l: 3px;
+  --border-width-xl: 5px;
+  /* Radii */
+  --border-radius-s: 0.2rem;
+  --border-radius-m: 0.75rem;
+  --border-radius-l: 2.5rem;
 }
