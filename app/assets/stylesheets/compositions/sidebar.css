@@ -26,7 +26,7 @@ content ordering while visually appearing flipped.
 }
 
 .sidebar:not([data-direction]) > :first-child {
-  flex-basis: var(--sidebar-target-width, 20rem);
+  flex-basis: var(--sidebar-target-width, fit-content);
 }
 
 .sidebar:not([data-direction]) > :last-child {
