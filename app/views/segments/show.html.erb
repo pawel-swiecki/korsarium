@@ -1,0 +1,3 @@
+<%= turbo_frame_tag "segment" do %>
+  <%= turbo_frame_tag "lessons", class:"sidebar", src: segment_lessons_path(@segment) %>
+<% end %>
