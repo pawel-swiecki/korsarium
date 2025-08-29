@@ -33,6 +33,7 @@ content ordering while visually appearing flipped.
   flex-basis: 0;
   flex-grow: 999;
   min-inline-size: var(--sidebar-content-min-width, 66.66%);
+  max-inline-size: var(--inline-size, none);
 }
 
 .sidebar[data-reversed] {
