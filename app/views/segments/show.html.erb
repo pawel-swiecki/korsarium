@@ -1,3 +1,3 @@
-<%= turbo_frame_tag "segment" do %>
-  <%= turbo_frame_tag "lessons", class:"sidebar", src: segment_lessons_path(@segment) %>
+<%= turbo_frame_tag "segment", class: "center inline-size-fit-content" do %>
+  <%= turbo_frame_tag "lessons", class:"center sidebar gutter-m-2xl", src: segment_lessons_path(@segment) %>
 <% end %>

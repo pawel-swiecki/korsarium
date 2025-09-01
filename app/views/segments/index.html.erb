@@ -1,5 +1,5 @@
-<%= turbo_frame_tag "segments", class: "flow" do %>
-  <div class="sidebar">
+<%= turbo_frame_tag "segments", class: "center flow inline-size-fit-content" do %>
+  <div class="sidebar center sidebar-content-min-width-s">
     <h1 style="margin-block-start: 0;">Segments</h1>
 
     <nav class="cluster nav">
@@ -11,5 +11,5 @@
     </nav>
   </div>
 
-  <%= turbo_frame_tag "segment", src: segment_path(@selected_segment) %>
+  <%= turbo_frame_tag "segment", class: "center inline-size-fit-content", src: segment_path(@selected_segment) %>
 <% end %>

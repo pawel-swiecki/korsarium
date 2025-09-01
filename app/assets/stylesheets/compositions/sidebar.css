@@ -26,14 +26,14 @@ content ordering while visually appearing flipped.
 }
 
 .sidebar:not([data-direction]) > :first-child {
-  flex-basis: var(--sidebar-target-width, 20rem);
-  flex-grow: 1;
+  flex-basis: var(--sidebar-target-width, fit-content);
 }
 
 .sidebar:not([data-direction]) > :last-child {
   flex-basis: 0;
   flex-grow: 999;
-  min-width: var(--sidebar-content-min-width, 66.66%);
+  min-inline-size: var(--sidebar-content-min-width, 66.66%);
+  max-inline-size: var(--inline-size, none);
 }
 
 .sidebar[data-reversed] {
