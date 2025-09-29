@@ -14,3 +14,7 @@
   text-decoration: none;
 }
 
+/* List items within a nav don't need margin since the disc is removed */
+.nav li {
+  margin: 0;
+}
