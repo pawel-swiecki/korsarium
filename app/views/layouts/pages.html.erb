@@ -28,11 +28,14 @@
 </head>
 
 <body>
-<nav>
-  <ul>
+<nav class="nav repel">
+  <ul role="list">
     <li><%= link_to image_tag("korsarium-logo-transparent.png", alt: "Korsarium logo", size:"100"), pages_path %></li>
-    <li><%= link_to "Sign In", new_session_path %></li>
-    <li><%= link_to "Start Free Trial", new_registration_path %></li>
+  </ul>
+
+  <ul class="cluster" role="list">
+    <li><wa-button><%= link_to "Sign In", new_session_path %></wa-button></li>
+    <li><wa-button><%= link_to "Sign Up", new_registration_path %></wa-button></li>
   </ul>
 </nav>
 <%= yield %>
