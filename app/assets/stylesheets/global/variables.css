@@ -63,6 +63,8 @@
   --color-dark-glare: #2d2816;
   --color-mid: #ABA9A2;
   --color-light: #ffffff;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
 
   /* BREAKPOINTS =========================================================================================================== */
   --breakpoint-s: 330px;
@@ -94,5 +96,6 @@
   /* INLINE SIZES ========================================================================================================== */
   --inline-size-s: 25em;
   --inline-size-m: 50em;
+  --inline-size-m-l: 65.5em;
   --inline-size-l: 75em;
 }

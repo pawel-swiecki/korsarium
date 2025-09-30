@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="wa-theme-awesome wa-palette-bright wa-brand-blue">
 <head>
   <title><%= content_for(:title) || "Korsarium" %></title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -20,14 +20,24 @@
   <%# Includes all stylesheet files in app/assets/stylesheets %>
   <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
   <%= javascript_importmap_tags %>
+ 
+  <%# Autoload Webawesome via CDN %>
+  <link rel="stylesheet" href="https://early.webawesome.com/webawesome@3.0.0-beta.6/dist/styles/webawesome.css" />
+  <script type="module" src="https://early.webawesome.com/webawesome@3.0.0-beta.6/dist/webawesome.loader.js"></script>
+
+  <%# Add 'awesome' theme %>
+  <link rel="stylesheet" href="https://early.webawesome.com/webawesome@3.0.0-beta.6/dist/styles/themes/awesome.css" />
 </head>
 
-<body>
-<nav>
-  <ul>
-    <li><%= link_to "Korsarium", root_path %></li>
-    <li><%= link_to "Sign In", new_session_path %></li>
-    <li><%= link_to "Start Free Trial", new_registration_path %></li>
+<body class="center flow box" style="max-inline-size: var(--inline-size-m-l);">
+<nav class="nav repel">
+  <ul class="wa-cluster" role="list">
+    <li><%= link_to image_tag("korsarium-logo-transparent.png", alt: "Korsarium logo", size:"200"), pages_path %></li>
+  </ul>
+
+  <ul class="wa-cluster" role="list">
+    <li><wa-button><%= link_to "Sign In", new_session_path %></wa-button></li>
+    <li><wa-button><%= link_to "Sign Up", new_registration_path %></wa-button></li>
   </ul>
 </nav>
 <%= yield %>
