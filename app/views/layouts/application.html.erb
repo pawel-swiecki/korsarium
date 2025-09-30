@@ -29,11 +29,16 @@
     <link rel="stylesheet" href="https://early.webawesome.com/webawesome@3.0.0-beta.6/dist/styles/themes/awesome.css" />
   </head>
 
-  <body>
-    <nav>
-      <%= link_to "Korsarium", root_path %>
-      <%= link_to "Courses", courses_path %>
-      <%= button_to "Log Out", session_path, method: :delete %>
+  <body class="center flow box" style="max-inline-size: var(--inline-size-l);">
+    <nav class="nav repel">
+      <ul class="wa-cluster" role="list">
+        <li><%= link_to image_tag("korsarium-logo-transparent.png", alt: "Korsarium logo", size:"200"), root_path %></li>
+      </ul>
+
+      <ul class="wa-cluster" role="list">
+        <li><%= link_to "Courses", courses_path %></li>
+        <li><%= button_to "Log Out", session_path, method: :delete %></li>
+      </ul>
     </nav>
 
     <main>
