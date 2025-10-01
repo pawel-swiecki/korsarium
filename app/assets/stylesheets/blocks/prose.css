@@ -41,7 +41,7 @@
   --flow-space: var(--space-xs);
 }
 
-/* Make thematic breaks the most common measure size by default and adjust as 
+/* Make thematic breaks the most common measure size by default and adjust as
   necessary using utility classes to set the --measure */
 .prose hr {
   max-inline-size: var(--measure, var(--measure-l));
