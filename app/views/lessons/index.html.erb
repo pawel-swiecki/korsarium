@@ -1,13 +1,13 @@
-<%= turbo_frame_tag "lessons", class: "center sidebar gutter-m-2xl" do %>
-  <div class="flow">
+<%= turbo_frame_tag "lessons" do %>
+  <div>
     <h1>Lessons</h1>
 
-    <nav class="stack">
+    <nav>
       <% @lessons.each do |lesson| %>
         <%= link_to lesson.title, lesson, data: {turbo_frame: "lesson"} %>
       <% end %>
     </nav>
   </div>
 
-  <%= turbo_frame_tag "lesson", class: "center flow prose", src: lesson_path(@selected_lesson) %>
+  <%= turbo_frame_tag "lesson", src: lesson_path(@selected_lesson) %>
 <% end %>
