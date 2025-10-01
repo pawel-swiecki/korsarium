@@ -1,15 +1,12 @@
 <%= turbo_frame_tag "lessons", class: "wa-flank wa-align-items-stretch wa-gap-3xl" do %>
   <div class="wa-stack wa-gap-3xl" style="padding-right: var(--space-l);">
     <h1 class="center">Lessons</h1>
-
     <nav class="wa-stack">
       <% @lessons.each do |lesson| %>
         <wa-button pill href="<%= lesson_path(lesson) %>" data-turbo-frame="lesson"><%= lesson.title %></wa-button>
       <% end %>
     </nav>
   </div>
-
   <wa-divider orientation="vertical" style="height: auto;"></wa-divider>
-
   <%= turbo_frame_tag "lesson", class: "prose flow", src: lesson_path(@selected_lesson) %>
 <% end %>
