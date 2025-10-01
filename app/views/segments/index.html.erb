@@ -2,18 +2,14 @@
   <div class="center">
     <div class="wa-flank wa-gap-3xl" style="--content-percentage: 20%">
       <h1>Segments</h1>
-
       <wa-divider orientation="vertical"></wa-divider>
-
-      <nav class="cluster wa-gap-3xl">
+      <wa-button-group style="flex-basis: auto;">
         <% @segments.each do |segment| %>
-          <%= link_to segment.title, segment, data: {turbo_frame: "segment"} %>
+          <wa-button pill href="<%= segment_path(segment) %>" data-turbo-frame="segment"><%= segment.title %></wa-button>
         <% end %>
-      </nav>
+      </wa-button-group>
     </div>
   </div>
-
   <wa-divider style="--color: black;"></wa-divider>
-
   <%= turbo_frame_tag "segment", src: segment_path(@selected_segment) %>
 <% end %>
