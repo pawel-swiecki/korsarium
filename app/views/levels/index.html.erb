@@ -1,11 +1,7 @@
 <%= turbo_frame_tag "levels" do %>
   <h1>Levels</h1>
-
-  <ul>
-    <% @levels.each do |level| %>
-      <li><%= link_to level.title, level, data: {turbo_frame: "level"} %></li>
-    <% end %>
-  </ul>
-
+  <% @levels.each do |level| %>
+    <%= link_to level.title, level, data: {turbo_frame: "level"} %>
+  <% end %>
   <%= turbo_frame_tag "level", src: level_path(@selected_level) %>
 <% end %>
