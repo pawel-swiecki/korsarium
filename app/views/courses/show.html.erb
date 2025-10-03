@@ -1,2 +1,4 @@
-<h1><%= @course.title %></h1>
-<%= turbo_frame_tag "levels", src: course_levels_path(@course) %>
+<div class="wa-stack wa-gap-3xl">
+  <h1 class="center"><%= @course.title %></h1>
+  <%= turbo_frame_tag "levels", class: "wa-stack wa-gap-3xl", src: course_levels_path(@course) %>
+</div>
