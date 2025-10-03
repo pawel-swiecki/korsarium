@@ -1,11 +1,10 @@
-<%= turbo_frame_tag "levels" do %>
-  <h1>Levels</h1>
-
-  <ul>
+<%= turbo_frame_tag "levels", class: "wa-stack wa-gap-3xl" do %>
+  <wa-dropdown size="large" placement="bottom" class="center">
+    <wa-button slot="trigger" with-caret>Levels</wa-button>
     <% @levels.each do |level| %>
-      <li><%= link_to level.title, level, data: {turbo_frame: "level"} %></li>
+      <wa-dropdown-item><%= link_to level.title, level, data: {turbo_frame: "level"} %></wa-dropdown-item>
     <% end %>
-  </ul>
-
+  </wa-dropdown>
+  <wa-divider style="--color: black;"></wa-divider>
   <%= turbo_frame_tag "level", src: level_path(@selected_level) %>
 <% end %>

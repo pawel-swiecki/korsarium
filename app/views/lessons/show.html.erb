@@ -1,7 +1,7 @@
-<%= turbo_frame_tag "lesson", class: "center flow prose" do %>
-  <h1 class="center"><%= @lesson.title %></h1>
+<%= turbo_frame_tag "lesson", class: "prose flow" do %>
+  <h1><%= @lesson.title %></h1>
 
-  <hr>
+  <wa-divider></wa-divider>
 
   <h2>Introduction</h2>
   <p><%= @lesson.introduction %></p>

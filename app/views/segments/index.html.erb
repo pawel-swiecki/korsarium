@@ -1,15 +1,13 @@
-<%= turbo_frame_tag "segments", class: "center flow inline-size-fit-content" do %>
-  <div class="sidebar center sidebar-content-min-width-s">
-    <h1 style="margin-block-start: 0;">Segments</h1>
-
-    <nav class="cluster nav">
-      <ul class="cluster" role="list">
-        <% @segments.each do |segment| %>
-          <li><%= link_to segment.title, segment, data: {turbo_frame: "segment"} %></li>
-        <% end %>
-      </ul>
-    </nav>
+<%= turbo_frame_tag "segments", class: "wa-stack wa-gap-3xl" do %>
+  <div class="wa-flank wa-gap-3xl" style="--content-percentage: 20%">
+    <h1>Segments</h1>
+    <wa-divider orientation="vertical"></wa-divider>
+    <wa-button-group style="flex-basis: auto;">
+      <% @segments.each do |segment| %>
+        <wa-button pill href="<%= segment_path(segment) %>" data-turbo-frame="segment"><%= segment.title %></wa-button>
+      <% end %>
+    </wa-button-group>
   </div>
-
-  <%= turbo_frame_tag "segment", class: "center inline-size-fit-content", src: segment_path(@selected_segment) %>
+  <wa-divider style="--color: black;"></wa-divider>
+  <%= turbo_frame_tag "segment", src: segment_path(@selected_segment) %>
 <% end %>

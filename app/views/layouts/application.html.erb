@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="wa-theme-awesome wa-palette-bright wa-brand-blue">
   <head>
     <title><%= content_for(:title) || "Korsarium" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -24,17 +24,18 @@
     <%# Autoload Webawesome via CDN %>
     <link rel="stylesheet" href="https://early.webawesome.com/webawesome@3.0.0-beta.6/dist/styles/webawesome.css" />
     <script type="module" src="https://early.webawesome.com/webawesome@3.0.0-beta.6/dist/webawesome.loader.js"></script>
+
+    <%# Add 'awesome' theme %>
     <link rel="stylesheet" href="https://early.webawesome.com/webawesome@3.0.0-beta.6/dist/styles/themes/awesome.css" />
   </head>
 
-  <body>
-    <nav>
-      <%= link_to "Korsarium", root_path %>
-      <%= link_to "Courses", courses_path %>
-      <%= button_to "Log Out", session_path, method: :delete %>
+  <body class="center flow box" style="max-inline-size: var(--inline-size-l);">
+    <nav class="nav repel">
+      <%= image_tag "korsarium-logo-transparent.png", alt: "Korsarium logo", size:"200" %>
+      <wa-button href="<%= courses_path %>">Courses</wa-button>
     </nav>
 
-    <main>
+    <main class="center">
       <%= yield %>
     </main>
   </body>
