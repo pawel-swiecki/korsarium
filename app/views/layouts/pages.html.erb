@@ -34,13 +34,16 @@
       <ul class="wa-cluster" role="list">
         <li><%= link_to image_tag("korsarium-logo-transparent.png", alt: "Korsarium logo", size:"200"), root_path %></li>
       </ul>
-
       <ul class="wa-cluster" role="list">
-        <li><wa-button><%= link_to "Sign In", new_session_path %></wa-button></li>
-        <li><wa-button><%= link_to "Sign Up", new_registration_path %></wa-button></li>
+        <li><wa-button pill href="<%= courses_path %>">Courses</wa-button></li>
+        <li>
+          <wa-button-group>
+            <wa-button pill href="<%= new_session_path %>">Sign In</wa-button>
+            <wa-button pill href="<%= new_registration_path %>">Sign Up</wa-button>
+          </wa-button-group>
+        </li>
       </ul>
     </nav>
-
     <%= yield %>
   </body>
 </html>
