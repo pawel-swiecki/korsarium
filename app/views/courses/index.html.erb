@@ -9,8 +9,8 @@
   <wa-divider></wa-divider>
 
   <% @courses.each do |course| %>
-      <wa-card class="with-media with-header with-footer">
-        <%= image_tag course.course_icon, slot: "media", style: "max-width: 600px;" %>
+      <wa-card class="with-media with-header with-footer" style="max-width: 600px;">
+        <%= image_tag course.course_icon, slot: "media" %>
 
         <h2 slot="header" class="center"><%= course.title %></h2>
 
