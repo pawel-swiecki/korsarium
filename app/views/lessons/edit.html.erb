@@ -1,6 +1,11 @@
 <%= turbo_frame_tag "lesson" do %>
-  <h1>Edit Lesson</h1>
+  <wa-card>
+    <div class="flow" style="--inline">
+      <h1 class="center">Edit <%= @lesson.title %></h1>
 
-  <%= render "form", lesson: @lesson %>
-  <%= link_to "Cancel", @lesson %>
+      <%= render "form", lesson: @lesson %>
+
+      <wa-button pill class="center" href="<%= lesson_path(@lesson) %>">Cancel</wa-button>
+    </div>
+  </wa-card>
 <% end %>
