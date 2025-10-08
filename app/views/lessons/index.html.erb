@@ -6,7 +6,7 @@
 
     <nav class="wa-stack">
       <% @lessons.each do |lesson| %>
-        <wa-button pill href="<%= lesson_path(lesson) %>" data-turbo-frame="lesson"><%= lesson.title %></wa-button>
+        <wa-button pill variant="brand" href="<%= lesson_path(lesson) %>" data-turbo-frame="lesson"><%= lesson.title %></wa-button>
       <% end %>
     </nav>
 

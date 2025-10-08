@@ -6,7 +6,7 @@
 
     <wa-button-group style="flex-basis: auto;">
       <% @segments.each do |segment| %>
-        <wa-button pill href="<%= segment_path(segment) %>" data-turbo-frame="segment"><%= segment.title %></wa-button>
+        <wa-button pill variant="brand" href="<%= segment_path(segment) %>" data-turbo-frame="segment"><%= segment.title %></wa-button>
       <% end %>
     </wa-button-group>
   </div>

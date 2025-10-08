@@ -1,6 +1,6 @@
 <%= turbo_frame_tag "levels", class: "wa-stack wa-gap-3xl" do %>
   <wa-dropdown size="large" placement="bottom" class="center">
-    <wa-button pill slot="trigger" with-caret>Levels</wa-button>
+    <wa-button pill variant="brand" slot="trigger" with-caret>Levels</wa-button>
 
     <% @levels.each do |level| %>
       <wa-dropdown-item><%= link_to level.title, level, data: {turbo_frame: "level"} %></wa-dropdown-item>
