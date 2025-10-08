@@ -10,6 +10,7 @@ class LessonsController < ApplicationController
   end
 
   def new
+    @segment = Segment.find(params[:segment_id])
     @lesson = Lesson.new
   end
 
