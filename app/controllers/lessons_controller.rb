@@ -1,5 +1,5 @@
 class LessonsController < ApplicationController
-  before_action :set_lesson, only: [:show, :edit, :update]
+  before_action :set_lesson, only: [:show, :edit, :update, :destroy]
   before_action :set_segment, only: [:index, :new, :create]
 
   def index
@@ -36,7 +36,6 @@ class LessonsController < ApplicationController
   end
 
   def destroy
-    @lesson = Lesson.find(params[:id])
     @lesson.destroy
     redirect_to lessons_path
   end
