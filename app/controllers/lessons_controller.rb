@@ -1,8 +1,8 @@
 class LessonsController < ApplicationController
   before_action :set_lesson, only: [:show, :edit, :update]
+  before_action :set_segment, only: [:index, :new, :create]
 
   def index
-    @segment = Segment.find(params[:segment_id])
     @lessons = Lesson.where(segment_id: @segment)
     @selected_lesson = Lesson.find_by(id: params[:lesson_id]) || @lessons.first
   end
@@ -11,12 +11,10 @@ class LessonsController < ApplicationController
   end
 
   def new
-    @segment = Segment.find(params[:segment_id])
     @lesson = Lesson.new
   end
 
   def create
-    @segment = Segment.find(params[:segment_id])
     @lesson = @segment.lessons.build(lesson_params)
 
     if @lesson.save
@@ -51,5 +49,9 @@ class LessonsController < ApplicationController
 
   def set_lesson
     @lesson = Lesson.find(params[:id])
+  end
+
+  def set_segment
+    @segment = Segment.find(params[:segment_id])
   end
 end
