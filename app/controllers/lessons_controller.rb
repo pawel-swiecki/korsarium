@@ -15,8 +15,9 @@ class LessonsController < ApplicationController
   end
 
   def create
-    @lesson = Lesson.new(lesson_params)
-    @lesson.save
+    @segment = Segment.find(params[:segment_id])
+    @lesson = @segment.lessons.build(lesson_params)
+
     if @lesson.save
       redirect_to @lesson
     else
