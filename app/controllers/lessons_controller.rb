@@ -36,8 +36,10 @@ class LessonsController < ApplicationController
   end
 
   def destroy
+    @segment = @lesson.segment_id
     @lesson.destroy
-    redirect_to lessons_path
+ 
+    redirect_to segment_lessons_path(@segment)
   end
 
   private
