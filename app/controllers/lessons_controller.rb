@@ -1,4 +1,6 @@
 class LessonsController < ApplicationController
+  before_action :set_lesson, only: [:show, :edit, :update]
+
   def index
     @segment = Segment.find(params[:segment_id])
     @lessons = Lesson.where(segment_id: @segment)
@@ -6,7 +8,6 @@ class LessonsController < ApplicationController
   end
 
   def show
-    @lesson = Lesson.find(params[:id])
   end
 
   def new
@@ -26,11 +27,9 @@ class LessonsController < ApplicationController
   end
 
   def edit
-    @lesson = Lesson.find(params[:id])
   end
 
   def update
-    @lesson = Lesson.find(params[:id])
     if @lesson.update(lesson_params)
       redirect_to @lesson
     else
@@ -48,5 +47,9 @@ class LessonsController < ApplicationController
 
   def lesson_params
     params.expect(lesson: [ :title, :introduction, :body, :summary ])
+  end
+
+  def set_lesson
+    @lesson = Lesson.find(params[:id])
   end
 end
