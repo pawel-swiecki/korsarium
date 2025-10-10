@@ -1,5 +1,5 @@
 class SegmentsController < ApplicationController
-  before_action :set_segment, only: [:index, :new]
+  before_action :set_level, only: [:index, :new]
 
   def index
     @segments = Segment.where(level_id: @level)
