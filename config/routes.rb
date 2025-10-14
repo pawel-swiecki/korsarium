@@ -3,16 +3,16 @@ Rails.application.routes.draw do
 
   get "/pages", to: "pages#main"
 
-  resources :courses do
-    resources :levels, shallow: true do
-      resources :segments, shallow: true do
-        resources :lessons, shallow: true
+  resources :courses, only: [:index, :show] do
+    resources :levels, only: [:index, :show] shallow: true do
+      resources :segments only: [:index, :show], shallow: true do
+        resources :lessons, only: [:index, :show], shallow: true
       end
     end
   end
 
   resources :passwords, param: :token
-  resource :registration, only: %i[new create]
+  resource :registration, only: [:new, :create]
   resource :session
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
