@@ -3,18 +3,6 @@
 
   <wa-divider></wa-divider>
 
-  <div class="wa-cluster">
-    <wa-button pill href="<%= edit_lesson_path(@lesson) %>">Edit</wa-button>
-
-    <%= wa_button_to "Delete",
-      @lesson,
-      method: :delete,
-      pill: true,
-      variant: "danger",
-      style: "margin-top: 0;"
-    %>
-  </div>
-
   <h2>Introduction</h2>
 
   <p><%= @lesson.introduction %></p>
