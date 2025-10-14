@@ -4,15 +4,11 @@
 
     <wa-divider orientation="vertical"></wa-divider>
 
-    <div>
-      <wa-button-group style="flex-basis: auto;">
-        <% @segments.each do |segment| %>
-          <wa-button pill variant="brand" href="<%= segment_path(segment) %>" data-turbo-frame="segment"><%= segment.title %></wa-button>
-        <% end %>
-      </wa-button-group>
-
-      <wa-button pill href="<%= new_level_segment_path(@level) %>" data-trubo-frame="new_segment"><wa-icon name="plus"></wa-icon></wa-button>
-    </div>
+    <wa-button-group style="flex-basis: auto;">
+      <% @segments.each do |segment| %>
+        <wa-button pill variant="brand" href="<%= segment_path(segment) %>" data-turbo-frame="segment"><%= segment.title %></wa-button>
+      <% end %>
+    </wa-button-group>
   </div>
 
   <wa-divider style="--color: black;"></wa-divider>
