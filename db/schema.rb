@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_10_15_145551) do
+ActiveRecord::Schema[8.0].define(version: 2025_10_15_152004) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -67,14 +67,6 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_15_145551) do
     t.index ["course_id"], name: "index_levels_on_course_id"
   end
 
-  create_table "libraries", force: :cascade do |t|
-    t.string "title"
-    t.integer "level_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["level_id"], name: "index_libraries_on_level_id"
-  end
-
   create_table "segments", force: :cascade do |t|
     t.string "title"
     t.datetime "created_at", null: false
@@ -87,6 +79,5 @@ ActiveRecord::Schema[8.0].define(version: 2025_10_15_145551) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "lessons", "segments"
   add_foreign_key "levels", "courses"
-  add_foreign_key "libraries", "levels"
   add_foreign_key "segments", "levels"
 end
