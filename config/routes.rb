@@ -3,10 +3,10 @@ Rails.application.routes.draw do
 
   get "/pages", to: "pages#main"
 
-  resources :courses, only: [:index, :show] do
-    resources :levels, only: [:index, :show], shallow: true do
-      resources :segments, only: [:index, :show], shallow: true do
-        resources :lessons, only: [:index, :show], shallow: true
+  resources :courses, only: [ :index, :show ] do
+    resources :levels, only: [ :index, :show ], shallow: true do
+      resources :segments, only: [ :index, :show ], shallow: true do
+        resources :lessons, only: [ :index, :show ], shallow: true
       end
     end
   end
