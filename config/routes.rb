@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  root "pages#main"
-
-  get "/pages", to: "pages#main"
+  root "courses#index"
 
   resources :courses, only: [ :index, :show ] do
     resources :levels, only: [ :index, :show ], shallow: true do
