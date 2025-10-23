@@ -6,6 +6,7 @@ class CoursesController < ApplicationController
   end
 
   def show
+    @segments = @course.segments
   end
 
   def edit
