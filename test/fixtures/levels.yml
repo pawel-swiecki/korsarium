@@ -2,8 +2,8 @@
 
 one:
   title: MyString
-  difficulty: 1
+  segment: one
 
 two:
   title: MyString
-  difficulty: 1
+  segment: two
