@@ -1,23 +1,25 @@
-<wa-button pill variant="brand" href="<%= course_path(@segment.course_id) %>">
-  Segments
-</wa-button>
+<div class="wa-stack">
+  <wa-button pill variant="brand" href="<%= course_path(@segment.course_id) %>">
+    Segments
+  </wa-button>
 
-<h1><%= @segment.title %> Levels</h1>
+  <h1><%= @segment.title %> Levels</h1>
 
-<h3>What Are Levels?</h3>
+  <h3>What Are Levels?</h3>
 
-<p>Levels are your pathway to mastery. Each one marks a meaningful step forward,
-starting with core foundations and advancing toward deeper knowledge and refined
-skill. As you progress, every Level builds upon what came before it, reinforcing
-your understanding while introducing new challenges that expand your abilities.</p>
+  <p>Levels are your pathway to mastery. Each one marks a meaningful step forward,
+  starting with core foundations and advancing toward deeper knowledge and refined
+  skill. As you progress, every Level builds upon what came before it, reinforcing
+  your understanding while introducing new challenges that expand your abilities.</p>
 
-<p>Each Level is composed of "Books" (as you'll see once you select a Level)
-thoughtfully structured to guide you from learning to doing, helping you apply
-concepts through clear explanations,real-world examples, and purposeful
-practice.</p>
+  <p>Each Level is composed of "Books" (as you'll see once you select a Level)
+  thoughtfully structured to guide you from learning to doing, helping you apply
+  concepts through clear explanations,real-world examples, and purposeful
+  practice.</p>
 
-<p>By the time you reach the higher Levels, you’ll not only see how far
-you’ve come, you’ll feel it, in the confidence and competence you’ve built
-along the way.</p>
+  <p>By the time you reach the higher Levels, you’ll not only see how far
+  you’ve come, you’ll feel it, in the confidence and competence you’ve built
+  along the way.</p>
 
-<%= render @levels %>
+  <%= render @levels %>
+</div>
