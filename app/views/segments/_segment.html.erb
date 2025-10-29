@@ -1,3 +1,5 @@
-<wa-card>
+<wa-card class="with-media with-header with-footer" style="max-width: 45ch;">
+  <%= image_tag segment.segment_icon, slot: "media" %>
+
   <%= link_to segment.title, segment_path(segment) %>
 </wa-card>
