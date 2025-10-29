@@ -2,5 +2,5 @@ class Segment < ApplicationRecord
   has_one_attached :segment_icon
 
   belongs_to :course
-  has_many :levels
+  has_many :levels, dependent: :destroy
 end
