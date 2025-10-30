@@ -3,5 +3,5 @@
   padding: var(--space-l);
   border-width: var(--border-width-s);
   outline: var(--border-width-s) solid transparent;
-  outline-offset: calc(var(--border-wdith-s) * -1);
+  outline-offset: calc(var(--border-width-s) * -1);
 }
