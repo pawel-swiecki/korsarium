@@ -23,6 +23,6 @@ class SegmentsController < ApplicationController
   end
 
   def segment_params
-    params.expect(segment: [ :title, :segment_icon ])
+    params.expect(segment: [ :segment_icon, :title, :subtitle ])
   end
 end
