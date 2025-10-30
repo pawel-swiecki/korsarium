@@ -1,21 +1,25 @@
 <div class="wa-stack wa-gap-3xl">
-  <h1 class="center">Segments of <%= @course.title %></h1>
+  <div class="prose flow">
+    <h1 class="center">Welcome to the <%= @course.title %> Course</h1>
 
-  <p>Each segment below is a focused area of growth within the course. Segments
-  are designed to help you work your way towards mastery in a key part of
-  physical health, one at a time. Instead of being overwhelmed with everything
-  at once, segments let you dive deep into specific themes.</p>
+    <p class="center">A Segment is a focused area of growth within the course. Segments
+    are designed to help you work your way towards mastery in a key part of
+    physical health, one at a time. Instead of being overwhelmed with everything
+    at once, Segments let you dive deep into specific themes.</p>
 
-  <p>Every segment builds real, lasting change by combining knowledge, practice,
-  and reflection so you’re not just learning, but integrating the teachings into
-  your daily life. Each segment is designed to bring you toward a stronger,
-  healthier, and more energized you.</p>
+    <p class="center">Every Segment builds real, lasting change by combining knowledge, practice,
+    and reflection so you’re not just learning, but integrating the teachings into
+    your daily life. Each Segment is designed to bring you toward a stronger,
+    healthier, and more energized you.</p>
 
-  <p>The segments are ordered in what we think is the most beneficial
-  way to progress so if you don't know where to begin, just go from left
-  to right. With that being said, all the segments are independent so
-  feel free to start with whichever interests you most.
-  </p>
+    <p class="center">The Segments are ordered in what we think is the most beneficial
+    way to progress so if you don't know where to begin, just go from left
+    to right, top to bottom. With that being said, all the Segments are independent so
+    feel free to start with whichever interests you most.
+    </p>
+
+    <h2 class="center">Explore the Segments of <%= @course.title %></h2>
+  </div>
 
   <section class="wa-grid">
     <%= render @segments %>
