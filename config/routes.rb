@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   root "courses#index"
 
   resources :courses, only: [ :index, :show ] do
-    resources :segments, only: [ :show, :edit, :update], shallow: true do
-      resources :levels, only: [ :show ], shallow: true do
+    resources :segments, only: [ :show, :edit, :update ], shallow: true do
+      resources :levels, only: [ :show, :edit, :update ], shallow: true do
         resources :textbook, only: [ :show ], shallow: true do
           resources :lessons, only: [ :index, :show ], shallow: true
         end
