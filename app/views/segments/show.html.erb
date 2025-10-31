@@ -1,27 +1,32 @@
-<div class="wa-stack">
-  <wa-button pill variant="brand" href="<%= course_path(@segment.course_id) %>">
-    Segments
+<div class="wa-stack wa-gap-3xl">
+  <wa-button pill variant="brand" href="<%= course_path(@segment.course_id) %>" style="width: fit-content;">
+    Back to Segments
   </wa-button>
 
+  <div class="prose flow">
+    <p>Levels are your pathway to mastery. Each one marks a meaningful step forward,
+    starting with core foundations and advancing toward deeper knowledge and refined
+    skill. As you progress, every Level builds upon what came before it, reinforcing
+    your understanding while introducing new challenges that expand your abilities.</p>
 
+    <p>Each Level is composed of "Books" (as you'll see once you select a Level)
+    thoughtfully structured to guide you from learning to doing, helping you apply
+    concepts through clear explanations,real-world examples, and purposeful
+    practice.</p>
 
-  <p>Levels are your pathway to mastery. Each one marks a meaningful step forward,
-  starting with core foundations and advancing toward deeper knowledge and refined
-  skill. As you progress, every Level builds upon what came before it, reinforcing
-  your understanding while introducing new challenges that expand your abilities.</p>
+    <p>By the time you reach the higher Levels, you’ll not only see how far
+    you’ve come, you’ll feel it, in the confidence and competence you’ve built
+    along the way.</p>
 
-  <p>Each Level is composed of "Books" (as you'll see once you select a Level)
-  thoughtfully structured to guide you from learning to doing, helping you apply
-  concepts through clear explanations,real-world examples, and purposeful
-  practice.</p>
+  </div>
 
-  <p>By the time you reach the higher Levels, you’ll not only see how far
-  you’ve come, you’ll feel it, in the confidence and competence you’ve built
-  along the way.</p>
+  <section class="wa-stack">
+    <h2 class="center">
+      Levels of <%= @segment.title %>
+    </h2>
 
-  <h2 class="center">
-    Levels of <%= @segment.title %>
-  </h2>
-
-  <%= render @levels %>
+    <div class="wa-grid">
+      <%= render @levels %>
+    </div>
+  </section>
 </div>
