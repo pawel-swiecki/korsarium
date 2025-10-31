@@ -1,5 +1,17 @@
-<wa-card class="with-media with-header with-footer" style="max-width: 45ch;">
+<wa-card class="with-media with-header with-footer center" style="max-width: 35ch;">
   <%= image_tag segment.segment_icon, slot: "media" %>
 
-  <%= link_to segment.title, segment_path(segment) %>
+  <h2 slot="header" class="center">
+    <%= segment.title %>
+  </h2>
+
+  <p class="center">
+    <%= segment.subtitle %>
+  </p>
+
+  <wa-button-group slot="footer" class="center">
+    <wa-button pill variant="brand" href="<%= segment_path(segment) %>">
+      Start Learning
+    </wa-button>
+  </wa-button-group>
 </wa-card>
