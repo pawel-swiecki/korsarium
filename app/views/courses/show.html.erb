@@ -17,13 +17,15 @@
     to right, top to bottom. With that being said, all the Segments are independent so
     feel free to start with whichever interests you most.
     </p>
+  </div>
 
+  <section class="wa-stack">
     <h2 class="center">
       Segments of <%= @course.title %>
     </h2>
-  </div>
 
-  <section class="wa-grid">
-    <%= render @segments %>
+    <div class="wa-grid">
+      <%= render @segments %>
+    </div>
   </section>
 </div>
