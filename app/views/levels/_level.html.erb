@@ -1,4 +1,17 @@
-<wa-card>
-  <%= link_to level.title, level_path(level) %>
-</wa-card>
+<wa-card class="with-media with-header with-footer center" style="max-width: 25ch;">
+  <%= image_tag level.level_icon, slot: "media" %>
 
+  <h2 slot="header" class="center">
+    <%= level.title %>
+  </h2>
+
+  <p class="center">
+    <%= level.subtitle %>
+  </p>
+
+  <wa-button-group slot="footer" class="center">
+    <wa-button pill variant="brand" href="<%= level_path(level) %>">
+      Start Learning
+    </wa-button>
+  </wa-button-group>
+</wa-card>
