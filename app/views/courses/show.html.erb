@@ -2,6 +2,10 @@
   <div class="prose flow">
     <h1 class="center">Welcome to the <%= @course.title %> Course</h1>
 
+    <h2 class="center">
+      Segments of <%= @course.title %>
+    </h2>
+
     <p class="center">A Segment is a focused area of growth within the course. Segments
     are designed to help you work your way towards mastery in a key part of
     physical health, one at a time. Instead of being overwhelmed with everything
@@ -19,13 +23,7 @@
     </p>
   </div>
 
-  <section class="wa-stack">
-    <h2 class="center">
-      Segments of <%= @course.title %>
-    </h2>
-
-    <div class="wa-grid">
-      <%= render @segments %>
-    </div>
-  </section>
+  <div class="wa-grid">
+    <%= render @segments %>
+  </div>
 </div>

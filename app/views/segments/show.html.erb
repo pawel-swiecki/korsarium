@@ -3,6 +3,10 @@
     Back to Segments
   </wa-button>
 
+  <h2 class="center">
+    Levels of <%= @segment.title %>
+  </h2>
+
   <div class="prose flow">
     <p>Levels are your pathway to mastery. Each one marks a meaningful step forward,
     starting with core foundations and advancing toward deeper knowledge and refined
@@ -20,13 +24,7 @@
 
   </div>
 
-  <section class="wa-stack">
-    <h2 class="center">
-      Levels of <%= @segment.title %>
-    </h2>
-
-    <div class="wa-grid">
-      <%= render @levels %>
-    </div>
-  </section>
+  <div class="wa-grid">
+    <%= render @levels %>
+  </div>
 </div>
