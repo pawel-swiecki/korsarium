@@ -1,2 +1,17 @@
-<h3><%= @textbook.title %></h1>
-<p><%= @textbook.subtitle %></p>
+<wa-card class="with-media with-header with-footer center" style="max-width: 35ch;">
+  <%= image_tag textbook.textbook_icon, slot:"media" %>
+
+  <h2 slot="header" class="center">
+    <%= @textbook.title %>
+  </h2>
+ 
+  <p class="center">
+    <%= @textbook.subtitle %>
+  </p>
+
+  <wa-button-group slot="footer" class="center">
+    <wa-button pill variant="brand" href="<%= textbook_path(textbook) %>">
+      Start Learning
+    </wa-button>
+  </wa-button-group>
+</wa-card>
