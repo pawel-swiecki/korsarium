@@ -1,7 +1,11 @@
-<wa-button pill variant="brand" href="<%= segment_path(@level.segment_id) %>">
-  Levels
-</wa-button>
+<div class="wa-stack wa-gap-3xl">
+  <wa-button pill variant="brand" href="<%= segment_path(@level.segment_id) %>" style="max-width: fit-content;">
+    Levels
+  </wa-button>
 
-<h1>Library</h1>
+  <h1 class="center">Library</h1>
 
-<%= render @textbook %>
+  <div class="wa-grid">
+    <%= render @textbook %>
+  </div>
+</div>
