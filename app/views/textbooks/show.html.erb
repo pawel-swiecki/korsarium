@@ -1,2 +1,3 @@
-<h1>Textbooks#show</h1>
-<p>Find me in app/views/textbooks/show.html.erb</p>
+<h1><%= @textbook.title %></h1>
+
+<%= turbo_frame_tag "lessons", class: "wa-stack wa-gap-3xl", src: textbook_lessons_path(@textbook) %>
