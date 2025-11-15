@@ -1,3 +1,12 @@
 <%= turbo_frame_tag "lesson" do %>
   <h3><%= @lesson.title %></h3>
+
+  <h4>Introduction</h4>
+  <p><%= @lesson.introduction %></p>
+
+  <h4>Body</h4>
+  <p><%= @lesson.body %></p>
+
+  <h4>Summary</h4>
+  <p><%= @lesson.summary %></p>
 <% end %>
