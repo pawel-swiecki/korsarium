@@ -1,3 +1,3 @@
 class Lesson < ApplicationRecord
-  belongs_to :segment, optional: true
+  belongs_to :textbook
 end
