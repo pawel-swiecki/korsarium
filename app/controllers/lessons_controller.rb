@@ -1,5 +1,6 @@
 class LessonsController < ApplicationController
   before_action :set_lesson, only: %i[ show ]
+  before_action :set_textbook, only: %i[ index ]
 
   def index
     @lessons = Lesson.all
