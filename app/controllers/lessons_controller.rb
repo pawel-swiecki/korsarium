@@ -4,6 +4,7 @@ class LessonsController < ApplicationController
 
   def index
     @lessons = Lesson.where(textbook_id: @textbook)
+    @selected_lesson = Lesson.find_by(id: params[:lesson_id]) || @lesson.first
   end
 
   def show
