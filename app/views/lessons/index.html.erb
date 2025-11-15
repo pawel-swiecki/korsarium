@@ -6,4 +6,6 @@
       <li><%= lesson.title %></li>
     </ul>
   <% end %>
+
+  <%= turbo_frame_tag "lesson", src: lesson_path(@selected_lesson) %>
 <% end %>
