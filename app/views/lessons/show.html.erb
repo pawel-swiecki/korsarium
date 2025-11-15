@@ -1,18 +1,14 @@
-<%= turbo_frame_tag "lesson", class: "prose flow" do %>
-  <h1><%= @lesson.title %></h1>
+<%= turbo_frame_tag "lesson" do %>
+  <div class="prose flow">
+    <h3><%= @lesson.title %></h3>
 
-  <wa-divider></wa-divider>
+    <h4>Introduction</h4>
+    <p><%= @lesson.introduction %></p>
 
-  <h2>Introduction</h2>
+    <h4>Body</h4>
+    <p><%= @lesson.body %></p>
 
-  <p><%= @lesson.introduction %></p>
-
-  <h2>Body</h2>
-
-  <p><%= @lesson.body %></p>
-
-  <h2>Summary</h2>
-
-  <p><%= @lesson.summary %></p>
-
+    <h4>Summary</h4>
+    <p><%= @lesson.summary %></p>
+  </div>
 <% end %>

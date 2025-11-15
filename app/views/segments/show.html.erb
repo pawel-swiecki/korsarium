@@ -1,3 +1,29 @@
-<%= turbo_frame_tag "segment" do %>
-  <%= turbo_frame_tag "lessons", class: "wa-flank wa-align-items-stretch wa-gap-3xl", src: segment_lessons_path(@segment) %>
-<% end %>
+<div class="wa-stack wa-gap-3xl">
+  <wa-button pill variant="brand" href="<%= course_path(@segment.course_id) %>" style="width: fit-content;">
+    Back to Segments
+  </wa-button>
+
+  <div class="prose flow">
+    <h2 class="center">
+      Levels of <%= @segment.title %>
+    </h2>
+
+    <p>Levels are your pathway to mastery. Each one marks a meaningful step forward,
+    starting with core foundations and advancing toward deeper knowledge and refined
+    skill. As you progress, every Level builds upon what came before it, reinforcing
+    your understanding while introducing new challenges that expand your abilities.</p>
+
+    <p>Each Level is composed of "Books" (as you'll see once you select a Level)
+    thoughtfully structured to guide you from learning to doing, helping you apply
+    concepts through clear explanations,real-world examples, and purposeful
+    practice.</p>
+
+    <p>By the time you reach the higher Levels, you’ll not only see how far
+    you’ve come, you’ll feel it, in the confidence and competence you’ve built
+    along the way.</p>
+  </div>
+
+  <div class="wa-grid">
+    <%= render @levels %>
+  </div>
+</div>

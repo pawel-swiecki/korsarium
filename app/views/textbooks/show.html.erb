@@ -1,0 +1,5 @@
+<div class="wa-stack wa-gap-3xl">
+  <h1 class="center"><%= @textbook.title %></h1>
+
+  <%= turbo_frame_tag "lessons", class: "wa-flank wa-align-items-stretch wa-gap-3xl", src: textbook_lessons_path(@textbook) %>
+</div>

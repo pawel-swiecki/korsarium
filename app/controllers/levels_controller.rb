@@ -1,11 +1,28 @@
 class LevelsController < ApplicationController
-  def index
-    @course = Course.find(params[:course_id])
-    @levels = Level.where(course_id: @course)
-    @selected_level = Level.find_by(id: params[:level_id]) || @levels.first
-  end
+  before_action :set_level, only: %i[ show edit update]
 
   def show
+    @textbook = @level.textbook
+  end
+
+  def edit
+  end
+
+  def update
+    if @level.update(level_params)
+      redirect_to @level
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
+  private
+
+  def set_level
     @level = Level.find(params[:id])
+  end
+
+  def level_params
+    params.expect(level: [ :level_icon, :title, :subtitle ])
   end
 end

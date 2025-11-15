@@ -1,22 +1,28 @@
 class SegmentsController < ApplicationController
-  before_action :set_level, only: [ :index, :new ]
-
-  def index
-    @segments = Segment.where(level_id: @level)
-    @selected_segment = Segment.find_by(id: params[:segment_id]) || @segments.first
-  end
+  before_action :set_segment, only: %i[show edit update]
 
   def show
-    @segment = Segment.find(params[:id])
+    @levels = @segment.levels
   end
 
-  def new
-    @segment = Segment.new
+  def edit
+  end
+
+  def update
+    if @segment.update(segment_params)
+      redirect_to @segment
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   private
 
-  def set_level
-    @level = Level.find(params[:level_id])
+  def set_segment
+    @segment = Segment.find(params[:id])
+  end
+
+  def segment_params
+    params.expect(segment: [ :segment_icon, :title, :subtitle ])
   end
 end

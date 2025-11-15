@@ -1,4 +1,6 @@
 class Level < ApplicationRecord
-  has_many :segments, dependent: :destroy
-  belongs_to :course, optional: true
+  has_one_attached :level_icon
+
+  belongs_to :segment
+  has_one :textbook
 end

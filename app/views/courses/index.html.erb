@@ -12,12 +12,18 @@
       <wa-card class="with-media with-header with-footer" style="max-width: 45ch;">
         <%= image_tag course.course_icon, slot: "media" %>
 
-        <h2 slot="header" class="center"><%= course.title %></h2>
+        <h2 slot="header" class="center">
+          <%= course.title %>
+        </h2>
 
-        <p class="center"><%= course.subtitle %></p>
+        <p class="center">
+          <%= course.subtitle %>
+        </p>
 
         <wa-button-group slot="footer" class="center">
-          <wa-button pill variant="brand" href="<%= course_path(course) %>">Start Learning</wa-button>
+          <wa-button pill variant="brand" href="<%= course_path(course) %>">
+            Start Learning
+          </wa-button>
         </wa-button-group>
       </wa-card>
   <% end %>

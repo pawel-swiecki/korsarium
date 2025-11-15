@@ -1,9 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  level: one
   title: MyString
-  course: one
+  subtitle: MyText
 
 two:
+  level: two
   title: MyString
-  course: two
+  subtitle: MyText

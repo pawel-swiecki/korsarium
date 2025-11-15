@@ -1,5 +1,42 @@
 <div class="wa-stack wa-gap-3xl">
-  <h1 class="center"><%= @course.title %></h1>
+  <div class="prose flow">
+    <h1 class="center">Welcome to the <%= @course.title %> Course</h1>
 
-  <%= turbo_frame_tag "levels", class: "wa-stack wa-gap-3xl", src: course_levels_path(@course) %>
+    <p class="center">The course is structured in a specific way to easily navigate
+    and focus on specific areas of focus one-at-a-time. You are more
+    than weclcome to jump around but we highly encourage you follow the
+    flow unless you are looking for a specific pieve of information.</p>
+
+    <p class="center">A course is broken up into many parts which you navigate to. At
+    the highest level are Segments, then each Segment is broken down into
+    Levels, and finally each Level will contain a variaty of "books".
+    The books are where all the content is stored and where you will truly
+    begin learning. As you navigate to the books, take a moment to read
+    the descriptions of each navigational section to get a solid understanding
+    of why the course is broken up the way it is.</p>
+
+    <h2 class="center">
+      Segments of <%= @course.title %>
+    </h2>
+
+    <p class="center">A Segment is a focused area of growth within the course. Segments
+    are designed to help you work your way towards mastery in a key part of
+    physical health, one at a time. Instead of being overwhelmed with everything
+    at once, Segments let you dive deep into specific themes.</p>
+
+    <p class="center">Every Segment builds real, lasting change by combining knowledge, practice,
+    and reflection so you’re not just learning, but integrating the teachings into
+    your daily life. Each Segment is designed to bring you toward a stronger,
+    healthier, and more energized you.</p>
+
+    <p class="center">The Segments are ordered in what we think is the most beneficial
+    way to progress so if you don't know where to begin, just go from left
+    to right, top to bottom. With that being said, all the Segments are independent so
+    feel free to start with whichever interests you most.
+    </p>
+  </div>
+
+  <div class="wa-grid">
+    <%= render @segments %>
+  </div>
 </div>
