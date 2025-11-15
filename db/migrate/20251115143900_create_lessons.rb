@@ -5,6 +5,7 @@ class CreateLessons < ActiveRecord::Migration[8.0]
       t.text :introduction
       t.text :body
       t.text :summary
+      t.references :textbook, null: false, foreign_key: true
 
       t.timestamps
     end
