@@ -3,7 +3,7 @@ class LessonsController < ApplicationController
   before_action :set_textbook, only: %i[ index ]
 
   def index
-    @lessons = Lesson.all
+    @lessons = Lesson.where(textbook_id: @textbook)
   end
 
   def show
@@ -11,6 +11,10 @@ class LessonsController < ApplicationController
   end
 
   private
+
+  def set_textbook
+    @textbook = Textbook.find_by(params[:textbook_id])
+  end
 
   def set_lesson
     @lesson = Lesson.find(params[:id])
