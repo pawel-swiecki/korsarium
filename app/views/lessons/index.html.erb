@@ -1,1 +1,9 @@
-<h1>Lessons</h1>
+<%= turbo_frame_tag "lessons" do %>
+  <h1>Lessons</h1>
+
+  <% @lessons.each do |lesson| %>
+    <ul>
+      <li><%= lesson.title %></li>
+    </ul>
+  <% end %>
+<% end %>
