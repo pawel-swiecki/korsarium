@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
   root "courses#index"
 
+  # Marketing
+  get "pages/main"
+
+  # Authentication
   resource :session
   resources :passwords, param: :token
 
+  # Course Structure
   resources :courses, only: [ :index, :show ] do
     resources :segments, only: [ :show, :edit, :update ], shallow: true do
       resources :levels, only: [ :show, :edit, :update ], shallow: true do
