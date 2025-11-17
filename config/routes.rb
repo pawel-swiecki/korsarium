@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   # Authentication
   resource :session
   resources :passwords, param: :token
+  resource :sign_up
 
   # Course Structure
   resources :courses, only: [ :index, :show ] do
