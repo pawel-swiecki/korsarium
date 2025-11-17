@@ -36,11 +36,9 @@
       <div>
         <wa-button pill variant="brand" href="<%= courses_path %>">Courses</wa-button>
 
-        <% if authenticated? %>
-          <wa-button pill variant="danger" href="<%= session_path %>" data-turbo-method="delete">
-            Log Out
-          </wa-button>
-        <% end %>
+        <wa-button pill variant="danger">
+          <%= link_to "Log Out", session_path, data: { turbo_method: :delete } %>
+        </wa-button>
       </div>
     </nav>
 
