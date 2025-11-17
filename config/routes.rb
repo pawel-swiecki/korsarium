@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+  root "courses#index"
+
   resource :session
   resources :passwords, param: :token
-  root "courses#index"
 
   resources :courses, only: [ :index, :show ] do
     resources :segments, only: [ :show, :edit, :update ], shallow: true do
