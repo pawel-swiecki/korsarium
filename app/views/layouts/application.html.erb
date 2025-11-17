@@ -33,7 +33,15 @@
     <nav class="nav repel">
       <%= link_to image_tag("korsarium-logo-transparent.png", alt: "Korsarium logo", size:"200"), root_path %>
 
-      <wa-button pill variant="brand" href="<%= courses_path %>">Courses</wa-button>
+      <div>
+        <wa-button pill variant="brand" href="<%= courses_path %>">Courses</wa-button>
+
+        <% if authenticated? %>
+          <wa-button pill variant="danger" href="<%= session_path %>" data-turbo-method="delete">
+            Log Out
+          </wa-button>
+        <% end %>
+      </div>
     </nav>
 
     <main class="center">
