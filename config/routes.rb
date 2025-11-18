@@ -11,7 +11,10 @@ Rails.application.routes.draw do
 
   # User Settings
   namespace :settings do
+    root to: redirect("/settings/profile")
+
     resource :password, only: [ :show, :update ]
+    resource :profile, only: [ :show, :update ]
   end
 
   # Course Structure
