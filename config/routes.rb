@@ -9,6 +9,11 @@ Rails.application.routes.draw do
   resources :passwords, param: :token
   resource :sign_up
 
+  # User Settings
+  namespace :settings do
+    resource :password, only: [ :show, :update ]
+  end
+
   # Course Structure
   resources :courses, only: [ :index, :show ] do
     resources :segments, only: [ :show, :edit, :update ], shallow: true do
