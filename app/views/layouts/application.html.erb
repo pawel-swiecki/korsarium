@@ -41,9 +41,37 @@
 
           <wa-dropdown>
             <wa-button pill variant="brand" slot="trigger" with-caret>Settings</wa-button>
-            <wa-button pill variant="brand" href="<%= settings_root_path %>">
-              Settings
-            </wa-button>
+
+            <wa-dropdown-item>
+              <wa-button appearance="plain" href="<%= settings_user_path %>">Account
+                <wa-icon slot="start" name="circle-user"></wa-icon>
+              </wa-button>
+            </wa-dropdown-item>
+
+            <wa-dropdown-item>
+              <wa-button appearance="plain" href="<%= settings_email_path %>">Email
+                <wa-icon slot="start" name="envelope"></wa-icon>
+              </wa-button>
+            </wa-dropdown-item>
+
+            <wa-dropdown-item>
+              <wa-button appearance="plain" href="<%= settings_password_path %>">Password
+                <wa-icon slot="start" name="key"></wa-icon>
+              </wa-button>
+            </wa-dropdown-item>
+
+            <wa-dropdown-item>
+              <wa-button appearance="plain" href="<%= settings_profile_path %>">Profile
+                <wa-icon slot="start" name="address-card"></wa-icon>
+              </wa-button>
+            </wa-dropdown-item>
+
+            <wa-dropdown-item>
+              <wa-button appearance="plain" variant="danger">
+                <wa-icon slot="start" name="right-from-bracket"></wa-icon>
+                <%= link_to "Log Out", session_path, data: { turbo_method: :delete } %>
+              </wa-button>
+            </wa-dropdown-item>
           </wa-dropdown>
         <% else %>
           <wa-button pill variant="brand" href="<%= sign_up_path %>">
