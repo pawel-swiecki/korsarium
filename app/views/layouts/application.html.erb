@@ -34,13 +34,26 @@
       <%= link_to image_tag("korsarium-logo-transparent.png", alt: "Korsarium logo", size:"200"), root_path %>
 
       <div>
-        <wa-button pill variant="brand" href="<%= courses_path %>">
-          Courses
-        </wa-button>
+        <% if authenticated? %>
+          <wa-button pill variant="brand" href="<%= courses_path %>">
+            Courses
+          </wa-button>
 
-        <wa-button pill variant="brand" href="<%= settings_root_path %>">
-          Settings
-        </wa-button>
+          <wa-dropdown>
+            <wa-button pill variant="brand" slot="trigger" with-caret>Settings</wa-button>
+            <wa-button pill variant="brand" href="<%= settings_root_path %>">
+              Settings
+            </wa-button>
+          </wa-dropdown>
+        <% else %>
+          <wa-button pill variant="brand" href="<%= sign_up_path %>">
+            Sign Up
+          </wa-button>
+
+          <wa-button pill variant="brand" href="<%= new_session_path %>">
+            Log In
+          </wa-button>
+        <% end %>
       </div>
     </nav>
 
