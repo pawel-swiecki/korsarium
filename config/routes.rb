@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   root "courses#index"
 
+  # Admin
+  namespace :admin do
+    resources :users
+  end
+
   # Authentication
   resource :session
   resources :passwords, param: :token
