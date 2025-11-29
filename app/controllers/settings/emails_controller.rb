@@ -1,4 +1,4 @@
-class Settings::EmailsController < Settings::BaseController
+class Settings::EmailsController < ApplicationController
   def show
   end
 
