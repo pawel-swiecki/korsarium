@@ -23,11 +23,12 @@ class Store::UsersController < Store::BaseController
   end
 
   private
-    def set_user
-      @user = User.find(params[:id])
-    end
 
-    def user_params
-      params.expect(user: [ :first_name, :last_name, :email_address ])
-    end
+  def set_user
+    @user = User.find(params[:id])
+  end
+
+  def user_params
+    params.expect(user: [ :first_name, :last_name, :email_address ])
+  end
 end
