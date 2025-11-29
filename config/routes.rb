@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   namespace :settings do
     root to: redirect("/settings/profile")
 
+    resource :email, only: [ :show, :update ]
     resource :password, only: [ :show, :update ]
     resource :profile, only: [ :show, :update ]
   end
