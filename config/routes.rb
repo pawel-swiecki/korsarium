@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :passwords, param: :token
   resource :sign_up
 
-  # Course_Structure
+  # Courses
   resources :courses, only: [ :index, :show ] do
     resources :segments, only: [ :show, :edit, :update ], shallow: true do
       resources :levels, only: [ :show, :edit, :update ], shallow: true do
