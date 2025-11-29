@@ -17,6 +17,11 @@ Rails.application.routes.draw do
     end
   end
 
+  # Email
+  namespace :email do
+    resources :confirmations, param: :token, only: [ :show ]
+  end
+
   # Marketing
   get "pages/main"
 
