@@ -1,24 +1,12 @@
 Rails.application.routes.draw do
   root "courses#index"
 
-  # Marketing
-  get "pages/main"
-
   # Authentication
   resource :session
   resources :passwords, param: :token
   resource :sign_up
 
-  # User Settings
-  namespace :settings do
-    root to: redirect("/settings/profile")
-
-    resource :email, only: [ :show, :update ]
-    resource :password, only: [ :show, :update ]
-    resource :profile, only: [ :show, :update ]
-  end
-
-  # Course Structure
+  # Course_Structure
   resources :courses, only: [ :index, :show ] do
     resources :segments, only: [ :show, :edit, :update ], shallow: true do
       resources :levels, only: [ :show, :edit, :update ], shallow: true do
@@ -27,6 +15,18 @@ Rails.application.routes.draw do
         end
       end
     end
+  end
+
+  # Marketing
+  get "pages/main"
+
+  # Settings
+  namespace :settings do
+    root to: redirect("/settings/profile")
+
+    resource :email, only: [ :show, :update ]
+    resource :password, only: [ :show, :update ]
+    resource :profile, only: [ :show, :update ]
   end
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
