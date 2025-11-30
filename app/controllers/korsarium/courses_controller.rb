@@ -1,4 +1,4 @@
-class Korsarium::ProductsController < Korsarium::BaseController
+class Korsarium::CoursesController < Korsarium::BaseController
   before_action :set_course, only: %i[ show edit update destroy ]
 
   def index
