@@ -1,4 +1,8 @@
 <div class="wa-stack wa-gap-2xl">
+  <wa-button href="<%= new_korsarium_course_path %>">
+    New Course
+  </wa-button>
+
   <% @courses.each do |course| %>
       <wa-card class="with-media with-header with-footer" style="max-width: 45ch;">
         <%= image_tag course.course_icon, slot: "media" %>
