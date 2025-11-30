@@ -9,23 +9,8 @@ class CoursesController < ApplicationController
     @segments = @course.segments
   end
 
-  def edit
-  end
-
-  def update
-    if @course.update(course_params)
-      redirect_to @course
-    else
-      render :edit, status: :unprocessable_entity
-    end
-  end
-
-  def destroy
-    @course.destroy
-    redirect_to courses_path
-  end
-
   private
+
   def set_course
     @course = Course.find(params[:id])
   end
