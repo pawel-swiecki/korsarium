@@ -1,13 +1,4 @@
 <div class="wa-stack wa-gap-2xl">
-  <section class="wa-stack wa-gap-xs">
-    <h1 class="center">Korsarium</h1>
-    <p class="center">/koːrser.i.əm/</p>
-    <p class="center"><em>noun</em></p>
-    <p class="center">a place specified for courses</p>
-  </section>
-
-  <wa-divider></wa-divider>
-
   <% @courses.each do |course| %>
       <wa-card class="with-media with-header with-footer" style="max-width: 45ch;">
         <%= image_tag course.course_icon, slot: "media" %>
@@ -21,8 +12,8 @@
         </p>
 
         <wa-button-group slot="footer" class="center">
-          <wa-button pill variant="brand" href="<%= course_path(course) %>">
-            Start Learning
+          <wa-button pill variant="brand" href="<%= korsarium_course_path(course) %>">
+            View Course
           </wa-button>
         </wa-button-group>
       </wa-card>
