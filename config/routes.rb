@@ -3,7 +3,10 @@ Rails.application.routes.draw do
 
   # Admin
   namespace :korsarium do
+    root to: redirect("/korsarium/courses")
+
     resources :users
+    resources :courses
   end
 
   # Authentication
