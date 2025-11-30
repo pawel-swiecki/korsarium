@@ -2,8 +2,16 @@
   <div class="prose flow">
     <h1 class="center"><%= @course.title %> Course</h1>
 
+    <wa-button href="<%= korsarium_courses_path %>">
+      Back
+    </wa-button>
+
     <wa-button href="<%= edit_korsarium_course_path %>">
       Edit Course
+    </wa-button>
+
+    <wa-button  variant="danger">
+      <%= link_to "Delete Course", korsarium_course_path, data: { turbo_method: :delete } %>
     </wa-button>
 
     <h2 class="center">
