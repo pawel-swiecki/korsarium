@@ -6,6 +6,7 @@ class Korsarium::CoursesController < Korsarium::BaseController
   end
 
   def show
+    @segments = @course.segments
   end
 
   def new
