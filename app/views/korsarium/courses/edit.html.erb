@@ -1,0 +1,8 @@
+<wa-card>
+  <div class="flow">
+  <h1 class="center">Edit <%= @course.title %></h1>
+
+  <%= render "form", course: @course %>
+
+  <wa-button pill class="center" href="<%= courses_path %>">Cancel</wa-button>
+</wa-card>
