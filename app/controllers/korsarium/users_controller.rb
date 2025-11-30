@@ -1,4 +1,4 @@
-class Admin::UsersController < Admin::BaseController
+class Korsarium::UsersController < Korsarium::BaseController
   before_action :set_user, only: %i[ show edit update destroy ]
 
   def index
@@ -13,7 +13,7 @@ class Admin::UsersController < Admin::BaseController
 
   def update
     if @user.update(user_params)
-      redirect_to admin_user_path(@user), status: :see_other, notice: "User has been updated"
+      redirect_to korsarium_user_path(@user), status: :see_other, notice: "User has been updated"
     else
       render :edit, status: :unprocessable_entity
     end

@@ -2,6 +2,6 @@
 
 <% @users.each do |user| %>
   <div>
-    <%= link_to user.full_name, admin_user_path(user) %>
+    <%= link_to user.full_name, korsarium_user_path(user) %>
   </div>
 <% end %>

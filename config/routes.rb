@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root "courses#index"
 
   # Admin
-  namespace :admin do
+  namespace :korsarium do
     resources :users
   end
 
