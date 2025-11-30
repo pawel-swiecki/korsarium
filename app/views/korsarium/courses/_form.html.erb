@@ -1,4 +1,4 @@
-<%= form_with model: course, class: "flow" do |form| %>
+<%= form_with model: [:korsarium, course], class: "flow" do |form| %>
   <div>
     <%= form.label :course_icon %>
     <%= form.file_field :course_icon, accept: "image/*" %>
