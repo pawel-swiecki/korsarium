@@ -5,10 +5,11 @@ Rails.application.routes.draw do
   namespace :korsarium do
     root to: redirect("/korsarium/courses")
 
-    resources :users
     resources :courses do
       resources :segments, shallow: true
     end
+    
+    resources :users
   end
 
   # Authentication
