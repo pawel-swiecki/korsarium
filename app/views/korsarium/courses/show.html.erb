@@ -22,10 +22,10 @@
       New Segment
     </wa-button>
 
-  <% @segments.each do |segment| %>
-    <wa-button pill variant="brand" href="<%= korsarium_segment_path(segment) %>">
-      <%= segment.title %>
-    </wa-button>
-  <% end %>
+    <% @segments.each do |segment| %>
+      <wa-button pill variant="brand" href="<%= korsarium_segment_path(segment) %>">
+        <%= segment.title %>
+      </wa-button>
+    <% end %>
   </div>
 </div>
