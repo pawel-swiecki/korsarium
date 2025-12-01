@@ -33,6 +33,12 @@ class Korsarium::SegmentsController < Korsarium::BaseController
     end
   end
 
+  def destroy
+    @course = @segment.course_id
+    @segment.destroy
+    redirect_to korsarium_course_path(@course)
+  end
+
   private
 
   def set_segment
