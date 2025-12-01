@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resources :courses do
       resources :segments, shallow: true
     end
-    
+
     resources :users
   end
 
