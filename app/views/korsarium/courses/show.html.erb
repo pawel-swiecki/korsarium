@@ -10,16 +10,22 @@
       Edit Course
     </wa-button>
 
-    <wa-button  variant="danger">
+    <wa-button variant="danger">
       <%= link_to "Delete Course", korsarium_course_path, data: { turbo_method: :delete } %>
     </wa-button>
 
     <h2 class="center">
       <%= @course.title %> Course's Segments
     </h2>
-  </div>
 
-  <div class="wa-grid">
-    <%= render @segments %>
+    <wa-button href="<%= new_korsarium_course_segment_path(@course) %>">
+      New Segment
+    </wa-button>
+
+  <% @segments.each do |segment| %>
+    <wa-button pill variant="brand" href="<%= korsarium_segment_path(segment) %>">
+      <%= segment.title %>
+    </wa-button>
+  <% end %>
   </div>
 </div>
