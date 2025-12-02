@@ -7,7 +7,6 @@ class Korsarium::LevelsController < Korsarium::BaseController
   end
 
   def show
-    @textbook = @level.textbook
   end
 
   def new
