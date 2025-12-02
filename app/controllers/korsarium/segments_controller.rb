@@ -1,5 +1,6 @@
 class Korsarium::SegmentsController < Korsarium::BaseController
   before_action :set_segment, only: %i[ show edit update destroy ]
+  before_action :set_course, only: %i[ new create ]
 
   def index
     @segments = Segment.all
@@ -11,11 +12,10 @@ class Korsarium::SegmentsController < Korsarium::BaseController
 
   def new
     @segment = Segment.new
-    @course = Course.find(params[:course_id])
   end
 
   def create
-    @segment = Segment.new(segment_params)
+    @segment = @course.segments.build(segment_params)
     if @segment.save
       redirect_to korsarium_segment_path(@segment)
     else
@@ -44,6 +44,10 @@ class Korsarium::SegmentsController < Korsarium::BaseController
 
   def set_segment
     @segment = Segment.find(params[:id])
+  end
+
+  def set_course
+    @course = Course.find(params[:course_id])
   end
 
   def segment_params
