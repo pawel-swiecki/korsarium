@@ -5,17 +5,6 @@ class LevelsController < ApplicationController
     @textbook = @level.textbook
   end
 
-  def edit
-  end
-
-  def update
-    if @level.update(level_params)
-      redirect_to @level
-    else
-      render :edit, status: :unprocessable_entity
-    end
-  end
-
   private
 
   def set_level
