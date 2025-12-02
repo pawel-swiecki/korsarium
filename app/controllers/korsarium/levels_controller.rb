@@ -14,6 +14,12 @@ class Korsarium::LevelsController < Korsarium::BaseController
   end
 
   def create
+    @level = @segment.levels.build(level_params)
+    if @level.save
+      redirect_to korsarium_level_path(@level)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def edit
