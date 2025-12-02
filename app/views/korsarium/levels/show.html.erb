@@ -20,7 +20,7 @@
       <h1 class="center">Library</h1>
       <div>
         <% if @level.textbook %>
-          <wa-button pill variant="brand" href="<%= korsarium_level_textbooks_path(@level) %>">
+          <wa-button pill variant="brand" href="<%= korsarium_textbook_path(@level.textbook) %>">
             Textbook
           </wa-button>
         <% else %>

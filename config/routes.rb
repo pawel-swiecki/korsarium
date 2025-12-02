@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resources :courses do
       resources :segments, shallow: true do
         resources :levels, shallow: true do
-          resource :textbooks, shallow: true do
+          resources :textbooks, shallow: true do
             resources :lessons, shallow: true
           end
         end
@@ -27,7 +27,7 @@ Rails.application.routes.draw do
   resources :courses, only: [ :index, :show ] do
     resources :segments, only: [ :show ], shallow: true do
       resources :levels, only: [ :show ], shallow: true do
-        resource :textbooks, only: [ :show ], shallow: true do
+        resources :textbooks, only: [ :show ], shallow: true do
           resources :lessons, only: [ :index, :show ], shallow: true
         end
       end
