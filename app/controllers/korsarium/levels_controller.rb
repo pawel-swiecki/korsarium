@@ -10,6 +10,7 @@ class Korsarium::LevelsController < Korsarium::BaseController
   end
 
   def new
+    @level = Level.new
   end
 
   def create
