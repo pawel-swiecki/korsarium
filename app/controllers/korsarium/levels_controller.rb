@@ -3,6 +3,7 @@ class Korsarium::LevelsController < Korsarium::BaseController
   before_action :set_segment, only: %i[ new create ]
 
   def index
+    @levels = Level.all
   end
 
   def show
