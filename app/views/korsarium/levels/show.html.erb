@@ -1,0 +1,19 @@
+<div class="wa-stack wa-gap-3xl">
+  <wa-button pill variant="brand" href="<%= segment_path(@level.segment_id) %>" style="max-width: fit-content;">
+    Back to Levels
+  </wa-button>
+
+  <div class="prose flow">
+    <h1 class="center">Library</h1>
+
+    <p>The Library is a place used to store books. Each Levels Library will have
+    a Textbook and Workbook specific to it. The Textbook is composed of textual
+    information for you to read and gain academic insight. The Workbook is a
+    set of instructions for you to follow and implement into your daily life to
+    understand more deeply and actually achieve your goals.</p>
+  </div>
+
+  <div class="wa-grid">
+    <%= render @textbook %>
+  </div>
+</div>

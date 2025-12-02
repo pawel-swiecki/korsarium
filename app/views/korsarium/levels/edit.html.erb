@@ -1,0 +1,20 @@
+<%= form_with model: @level, class: "flow" do |form| %>
+  <div>
+    <%= form.label :level_icon %>
+    <%= form.file_field :level_icon, accept: "image/*" %>
+  </div>
+
+  <div>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :subtitle %>
+    <%= form.text_field :subtitle %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
