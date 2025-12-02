@@ -1,0 +1,20 @@
+<%= form_with model: [:korsarium, :course, segment], class: "flow" do |form| %>
+  <div>
+    <%= form.label :segment_icon %>
+    <%= form.file_field :segment_icon, accept: "image/*" %>
+  </div>
+
+  <div>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :subtitle %>
+    <%= form.text_area :subtitle, rows: "4" %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
