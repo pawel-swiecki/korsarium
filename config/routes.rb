@@ -25,7 +25,7 @@ Rails.application.routes.draw do
   resources :courses, only: [ :index, :show ] do
     resources :segments, only: [ :show ], shallow: true do
       resources :levels, only: [ :show ], shallow: true do
-        resources :textbooks, only: [ :show ], shallow: true do
+        resource :textbooks, only: [ :show ], shallow: true do
           resources :lessons, only: [ :index, :show ], shallow: true
         end
       end
