@@ -1,5 +1,5 @@
 class LevelsController < ApplicationController
-  before_action :set_level, only: %i[ show edit update]
+  before_action :set_level, only: %i[ show ]
 
   def show
     @textbook = @level.textbook
