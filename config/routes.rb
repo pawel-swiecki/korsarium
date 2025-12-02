@@ -6,7 +6,9 @@ Rails.application.routes.draw do
     root to: redirect("/korsarium/courses")
 
     resources :courses do
-      resources :segments, shallow: true
+      resources :segments, shallow: true do
+        resources :levels, shallow: true
+      end
     end
 
     resources :users
