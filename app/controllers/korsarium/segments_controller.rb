@@ -11,6 +11,7 @@ class Korsarium::SegmentsController < Korsarium::BaseController
 
   def new
     @segment = Segment.new
+    @course = Course.find(params[:course_id])
   end
 
   def create
