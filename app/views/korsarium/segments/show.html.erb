@@ -18,6 +18,10 @@
       <%= @segment.title %> Segment's Levels
     </h2>
 
+    <wa-button href="<%= new_korsarium_segment_level_path(@segment) %>">
+      New Level
+    </wa-button>
+
     <% @levels.each do |level| %>
       <wa-button pill variant="brand" href="<%= korsarium_level_path(level) %>">
         <%= level.title %>
