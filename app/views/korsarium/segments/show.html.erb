@@ -17,5 +17,11 @@
     <h2 class="center">
       <%= @segment.title %> Segment's Levels
     </h2>
+
+    <% @levels.each do |level| %>
+      <wa-button pill variant="brand" href="<%= korsarium_level_path(level) %>">
+        <%= level.title %>
+      </wa-button>
+    <% end %>
   </div>
 </div>
