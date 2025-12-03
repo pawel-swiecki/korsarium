@@ -16,7 +16,7 @@ class Korsarium::TextbooksController < Korsarium::BaseController
   def create
     @textbook = @level.textbooks.build(textbook_params)
     if @textbook.save
-      redirect_to @textbook
+      redirect_to korsarium_textbook_path(@textbook)
     else
       render :new, status: :unprocessable_entity
     end
@@ -27,7 +27,7 @@ class Korsarium::TextbooksController < Korsarium::BaseController
 
   def update
     if @textbook.update(textbook_params)
-      redirect_to @textbook
+      redirect_to korsarium_textbook_path(@textbook)
     else
       render :edit, status: :unprocessable_entity
     end
@@ -36,7 +36,7 @@ class Korsarium::TextbooksController < Korsarium::BaseController
   def destroy
     @level = @textbook.level_id
     @textbook.destroy
-    redirect_to @level
+    redirect_to korasium_level_path(@level)
   end
 
   private
