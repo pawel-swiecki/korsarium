@@ -36,7 +36,7 @@ class Korsarium::TextbooksController < Korsarium::BaseController
   def destroy
     @level = @textbook.level_id
     @textbook.destroy
-    redirect_to korasium_level_path(@level)
+    redirect_to korsarium_level_path(@level)
   end
 
   private
