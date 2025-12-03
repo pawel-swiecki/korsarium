@@ -1,0 +1,9 @@
+<div class="wa-stack wa-gap-3xl">
+  <wa-button pill variant="brand" href="<%= level_path(@textbook.level_id) %>" style="width: fit-content;">
+    Back to Library
+  </wa-button>
+
+  <h1 class="center"><%= @textbook.title %></h1>
+
+  <%= turbo_frame_tag "lessons", class: "wa-flank wa-align-items-stretch wa-gap-3xl", src: textbook_lessons_path(@textbook) %>
+</div>
