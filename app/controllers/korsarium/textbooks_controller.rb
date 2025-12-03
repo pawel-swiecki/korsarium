@@ -7,6 +7,7 @@ class Korsarium::TextbooksController < Korsarium::BaseController
   end
 
   def show
+    @lessons = @textbook.lessons
   end
 
   def new
