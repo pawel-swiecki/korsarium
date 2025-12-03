@@ -1,9 +1,33 @@
 <div class="wa-stack wa-gap-3xl">
-  <wa-button pill variant="brand" href="<%= level_path(@textbook.level_id) %>" style="width: fit-content;">
-    Back to Library
-  </wa-button>
+  <div class="prose flow">
+    <h1 class="center">
+      <%= @textbook.title %>
+    </h1>
 
-  <h1 class="center"><%= @textbook.title %></h1>
+    <wa-button href="<%= korsarium_level_path(@textbook.level_id) %>">
+      Back
+    </wa-button>
 
-  <%= turbo_frame_tag "lessons", class: "wa-flank wa-align-items-stretch wa-gap-3xl", src: textbook_lessons_path(@textbook) %>
+    <wa-button href="<%= edit_korsarium_textbook_path %>">
+      Edit Textbook
+    </wa-button>
+
+    <wa-button variant="danger">
+      <%= link_to "Delete Textbook", korsarium_textbook_path, data: { turbo_method: :delete } %>
+    </wa-button>
+
+    <div class="prose flow">
+      <h1 class="center">Lessons</h1>
+
+      <wa-button href="<%= new_korsarium_textbook_lesson_path(@textbook) %>">
+        New Lesson
+      </wa-button>
+
+      <% @lessons.each do |lesson| %>
+        <wa-button pill variant="brand" href="<%= korsarium_lesson_path(lesson) %>">
+          <%= lesson.title %>
+        </wa-button>
+      <% end %>
+    </div>
+  </div>
 </div>
