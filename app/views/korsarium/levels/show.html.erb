@@ -18,21 +18,18 @@
 
     <div class="prose flow">
       <h1 class="center">Library</h1>
+
       <div>
-          <wa-button href="<%= new_korsarium_level_textbook_path(@level) %>">
-            New Textbook
+        <wa-button href="<%= new_korsarium_level_textbook_path(@level) %>">
+          New Textbook
+        </wa-button>
+
+        <% @textbooks.each do |textbook| %>
+          <wa-button pill variant="brand" href="<%= korsarium_textbook_path(textbook) %>">
+            <%= textbook.title %>
           </wa-button>
-
-          <% @textbooks.each do |textbook| %>
-            <wa-button pill variant="brand" href="<%= korsarium_textbook_path(textbook) %>">
-              <%= textbook.title %>
-            </wa-button>
-          <% end %>
-
+        <% end %>
       </div>
     </div>
-
-    <div class="wa-grid">
-    </div>
   </div>
-  </div>
+</div>
