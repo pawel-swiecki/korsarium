@@ -12,6 +12,7 @@ class Korsarium::TextbooksController < Korsarium::BaseController
 
   def new
     @textbook = Textbook.new
+    @form_model = [ :korsarium, @level, @textbook ]
   end
 
   def create
@@ -24,6 +25,7 @@ class Korsarium::TextbooksController < Korsarium::BaseController
   end
 
   def edit
+    @form_model = [ :korsarium, @textbook ]
   end
 
   def update
