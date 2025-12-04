@@ -10,8 +10,4 @@ class SegmentsController < ApplicationController
   def set_segment
     @segment = Segment.find(params[:id])
   end
-
-  def segment_params
-    params.expect(segment: [ :segment_icon, :title, :subtitle ])
-  end
 end

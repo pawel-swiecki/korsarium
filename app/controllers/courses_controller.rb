@@ -14,8 +14,4 @@ class CoursesController < ApplicationController
   def set_course
     @course = Course.find(params[:id])
   end
-
-  def course_params
-    params.expect(course: [ :title, :subtitle, :course_icon ])
-  end
 end
