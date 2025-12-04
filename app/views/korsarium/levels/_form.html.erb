@@ -1,4 +1,4 @@
-<%= form_with model: [:korsarium, level], class: "flow" do |form| %>
+<%= form_with model: @form_model, class: "flow" do |form| %>
   <div>
     <%= form.label :level_icon %>
     <%= form.file_field :level_icon, accept: "image/*" %>

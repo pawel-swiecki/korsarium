@@ -2,7 +2,7 @@
   <div class="flow">
   <h1 class="center">Edit <%= @level.title %></h1>
 
-  <%= render "form", level: @level %>
+  <%= render "form", form_model: @form_model, level: @level %>
 
   <wa-button pill class="center" href="<%= korsarium_level_path(@level) %>">Cancel</wa-button>
 </wa-card>

@@ -12,6 +12,7 @@ class Korsarium::LevelsController < Korsarium::BaseController
 
   def new
     @level = Level.new
+    @form_model = [ :korsarium, @segment, @level ]
   end
 
   def create
@@ -24,6 +25,7 @@ class Korsarium::LevelsController < Korsarium::BaseController
   end
 
   def edit
+    @form_model = [ :korsarium, @level ]
   end
 
   def update
