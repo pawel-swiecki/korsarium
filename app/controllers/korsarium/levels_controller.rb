@@ -28,7 +28,7 @@ class Korsarium::LevelsController < Korsarium::BaseController
 
   def update
     if @level.update(level_params)
-      redirect_to korasium_level_path(@level)
+      redirect_to korsarium_level_path(@level)
     else
       render :edit, status: :unprocessable_entity
     end
