@@ -12,6 +12,7 @@ class Korsarium::SegmentsController < Korsarium::BaseController
 
   def new
     @segment = Segment.new
+    @form_model = [ :korsarium, @course, @segment ]
   end
 
   def create
@@ -24,6 +25,7 @@ class Korsarium::SegmentsController < Korsarium::BaseController
   end
 
   def edit
+    @form_model = [ :korsarium, @segment ]
   end
 
   def update

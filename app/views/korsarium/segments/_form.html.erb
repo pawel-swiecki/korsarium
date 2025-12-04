@@ -1,4 +1,4 @@
-<%= form_with model: [:korsarium, segment], class: "flow" do |form| %>
+<%= form_with model: @form_model, class: "flow" do |form| %>
   <div>
     <%= form.label :segment_icon %>
     <%= form.file_field :segment_icon, accept: "image/*" %>

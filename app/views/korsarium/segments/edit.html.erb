@@ -2,7 +2,7 @@
   <div class="flow">
   <h1 class="center">Edit <%= @segment.title %></h1>
 
-  <%= render "form", segment: @segment %>
+  <%= render "form", form_model: @form_model, segment: @segment %>
 
   <wa-button pill class="center" href="<%= korsarium_segment_path(@segment) %>">Cancel</wa-button>
 </wa-card>
