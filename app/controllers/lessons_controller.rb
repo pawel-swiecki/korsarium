@@ -14,7 +14,7 @@ class LessonsController < ApplicationController
   private
 
   def set_textbook
-    @textbook = Textbook.find_by(params[:textbook_id])
+    @textbook = Textbook.find(params[:textbook_id])
   end
 
   def set_lesson
