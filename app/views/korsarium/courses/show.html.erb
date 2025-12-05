@@ -1,0 +1,31 @@
+<div class="wa-stack wa-gap-3xl">
+  <div class="prose flow">
+    <h1 class="center"><%= @course.title %> Course</h1>
+
+    <wa-button href="<%= korsarium_courses_path %>">
+      Back
+    </wa-button>
+
+    <wa-button href="<%= edit_korsarium_course_path %>">
+      Edit Course
+    </wa-button>
+
+    <wa-button variant="danger">
+      <%= link_to "Delete Course", korsarium_course_path, data: { turbo_method: :delete } %>
+    </wa-button>
+
+    <h2 class="center">
+      <%= @course.title %> Course's Segments
+    </h2>
+
+    <wa-button href="<%= new_korsarium_course_segment_path(@course) %>">
+      New Segment
+    </wa-button>
+
+    <% @segments.each do |segment| %>
+      <wa-button pill variant="brand" href="<%= korsarium_segment_path(segment) %>">
+        <%= segment.title %>
+      </wa-button>
+    <% end %>
+  </div>
+</div>

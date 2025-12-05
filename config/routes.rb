@@ -1,14 +1,55 @@
 Rails.application.routes.draw do
-  root "courses#index"
+  root "pages#main"
 
+  # Admin
+  namespace :korsarium do
+    root to: redirect("/korsarium/courses")
+
+    resources :courses do
+      resources :segments, shallow: true do
+        resources :levels, shallow: true do
+          resources :textbooks, shallow: true do
+            resources :lessons, shallow: true
+          end
+        end
+      end
+    end
+
+    resources :users
+  end
+
+  # Authentication
+  resource :session
+  resources :passwords, param: :token
+  resource :sign_up
+
+  # Courses
   resources :courses, only: [ :index, :show ] do
-    resources :segments, only: [ :show, :edit, :update ], shallow: true do
-      resources :levels, only: [ :show, :edit, :update ], shallow: true do
+    resources :segments, only: [ :show ], shallow: true do
+      resources :levels, only: [ :show ], shallow: true do
         resources :textbooks, only: [ :show ], shallow: true do
           resources :lessons, only: [ :index, :show ], shallow: true
         end
       end
     end
+  end
+
+  # Email
+  namespace :email do
+    resources :confirmations, param: :token, only: [ :show ]
+  end
+
+  # Marketing
+  get "pages/main"
+
+  # Settings
+  namespace :settings do
+    root to: redirect("/settings/profile")
+
+    resource :email, only: [ :show, :update ]
+    resource :password, only: [ :show, :update ]
+    resource :profile, only: [ :show, :update ]
+    resource :user, only: [ :show, :destroy ]
   end
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

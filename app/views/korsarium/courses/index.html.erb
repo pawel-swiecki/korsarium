@@ -1,0 +1,11 @@
+<div class="wa-stack wa-gap-2xl">
+  <wa-button href="<%= new_korsarium_course_path %>">
+    New Course
+  </wa-button>
+
+  <% @courses.each do |course| %>
+    <wa-button pill variant="brand" href="<%= korsarium_course_path(course) %>">
+      <%= course.title %>
+    </wa-button>
+  <% end %>
+</div>

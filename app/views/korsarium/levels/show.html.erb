@@ -1,0 +1,35 @@
+<div class="wa-stack wa-gap-3xl">
+  <div class="prose flow">
+    <h1 class="center">
+      <%= @level.title %>
+    </h1>
+
+    <wa-button href="<%= korsarium_segment_path(@level.segment_id) %>">
+      Back
+    </wa-button>
+
+    <wa-button href="<%= edit_korsarium_level_path %>">
+      Edit Level
+    </wa-button>
+
+    <wa-button variant="danger">
+      <%= link_to "Delete Level", korsarium_level_path, data: { turbo_method: :delete } %>
+    </wa-button>
+
+    <div class="prose flow">
+      <h1 class="center">Library</h1>
+
+      <div>
+        <wa-button href="<%= new_korsarium_level_textbook_path(@level) %>">
+          New Textbook
+        </wa-button>
+
+        <% @textbooks.each do |textbook| %>
+          <wa-button pill variant="brand" href="<%= korsarium_textbook_path(textbook) %>">
+            <%= textbook.title %>
+          </wa-button>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

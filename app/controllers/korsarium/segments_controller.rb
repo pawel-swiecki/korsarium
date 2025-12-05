@@ -1,0 +1,58 @@
+class Korsarium::SegmentsController < Korsarium::BaseController
+  before_action :set_segment, only: %i[ show edit update destroy ]
+  before_action :set_course, only: %i[ new create ]
+
+  def index
+    @segments = Segment.all
+  end
+
+  def show
+    @levels = @segment.levels
+  end
+
+  def new
+    @segment = Segment.new
+    @form_model = [ :korsarium, @course, @segment ]
+  end
+
+  def create
+    @segment = @course.segments.build(segment_params)
+    if @segment.save
+      redirect_to korsarium_segment_path(@segment)
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+
+  def edit
+    @form_model = [ :korsarium, @segment ]
+  end
+
+  def update
+    if @segment.update(segment_params)
+      redirect_to korsarium_segment_path(@segment)
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @course = @segment.course_id
+    @segment.destroy
+    redirect_to korsarium_course_path(@course)
+  end
+
+  private
+
+  def set_segment
+    @segment = Segment.find(params[:id])
+  end
+
+  def set_course
+    @course = Course.find(params[:course_id])
+  end
+
+  def segment_params
+    params.expect(segment: [ :segment_icon, :title, :subtitle ])
+  end
+end

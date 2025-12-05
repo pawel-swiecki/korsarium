@@ -1,7 +1,7 @@
-<%= form_with model: course, class: "flow" do |form| %>
+<%= form_with model: @form_model, class: "flow" do |form| %>
   <div>
-    <%= form.label :course_icon %>
-    <%= form.file_field :course_icon, accept: "image/*" %>
+    <%= form.label :textbook_icon %>
+    <%= form.file_field :textbook_icon, accept: "image/*" %>
   </div>
 
   <div>

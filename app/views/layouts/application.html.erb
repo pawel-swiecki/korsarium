@@ -33,7 +33,75 @@
     <nav class="nav repel">
       <%= link_to image_tag("korsarium-logo-transparent.png", alt: "Korsarium logo", size:"200"), root_path %>
 
-      <wa-button pill variant="brand" href="<%= courses_path %>">Courses</wa-button>
+      <div>
+        <% if authenticated? %>
+          <wa-button pill variant="brand" href="<%= courses_path %>">
+            Courses
+          </wa-button>
+
+          <wa-dropdown>
+            <wa-button pill variant="brand" slot="trigger" with-caret>Settings</wa-button>
+
+            <h3>User</h3>
+            <wa-dropdown-item>
+              <wa-button appearance="plain" href="<%= settings_user_path %>">Account
+                <wa-icon slot="start" name="circle-user"></wa-icon>
+              </wa-button>
+            </wa-dropdown-item>
+
+            <wa-dropdown-item>
+              <wa-button appearance="plain" href="<%= settings_email_path %>">Email
+                <wa-icon slot="start" name="envelope"></wa-icon>
+              </wa-button>
+            </wa-dropdown-item>
+
+            <wa-dropdown-item>
+              <wa-button appearance="plain" href="<%= settings_password_path %>">Password
+                <wa-icon slot="start" name="key"></wa-icon>
+              </wa-button>
+            </wa-dropdown-item>
+
+            <wa-dropdown-item>
+              <wa-button appearance="plain" href="<%= settings_profile_path %>">Profile
+                <wa-icon slot="start" name="address-card"></wa-icon>
+              </wa-button>
+            </wa-dropdown-item>
+
+            <wa-dropdown-item>
+              <wa-button appearance="plain" variant="danger">
+                <wa-icon slot="start" name="right-from-bracket"></wa-icon>
+                <%= link_to "Log Out", session_path, data: { turbo_method: :delete } %>
+              </wa-button>
+            </wa-dropdown-item>
+
+            <% if Current.user.admin? %>
+              <wa-divider></wa-divider>
+
+              <h4>Korsarium</h4>
+
+              <wa-dropdown-item>
+                <wa-button appearance="plain" href="<%= korsarium_users_path %>">Users
+                  <wa-icon slot="start" name="address-card"></wa-icon>
+                </wa-button>
+              </wa-dropdown-item>
+
+              <wa-dropdown-item>
+                <wa-button appearance="plain" href="<%= korsarium_courses_path %>">Courses
+                  <wa-icon slot="start" name="book-open-reader"></wa-icon>
+                </wa-button>
+              </wa-dropdown-item>
+            <% end %>
+          </wa-dropdown>
+        <% else %>
+          <wa-button pill variant="brand" href="<%= sign_up_path %>">
+            Sign Up
+          </wa-button>
+
+          <wa-button pill variant="brand" href="<%= new_session_path %>">
+            Log In
+          </wa-button>
+        <% end %>
+      </div>
     </nav>
 
     <main class="center">
