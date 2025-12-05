@@ -1,0 +1,8 @@
+<wa-card>
+  <div class="flow">
+  <h1 class="center">Edit <%= @lesson.title %></h1>
+
+  <%= render "form", form_model: @form_model, lesson: @lesson %>
+
+  <wa-button pill class="center" href="<%= korsarium_lesson_path(@lesson) %>">Cancel</wa-button>
+</wa-card>
