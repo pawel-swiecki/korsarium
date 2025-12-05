@@ -11,23 +11,25 @@ class Korsarium::LessonsController < Korsarium::BaseController
 
   def new
     @lesson = Lesson.new
+    @form_model = [ :korsarium, @textbook, @lesson ]
   end
 
   def create
     @lesson = @textbook.lessons.build(lesson_params)
     if @lesson.save
-      redirect_to @lesson
+      redirect_to korsarium_lesson_path(@lesson)
     else
       render :new, status: :unprocessable_entity
     end
   end
 
   def edit
+    @form_model = [ :korsarium, @lesson ]
   end
 
   def update
     if @lesson.update(lesson_params)
-      redirect_to @lesson
+      redirect_to korsarium_lesson_path(@lesson)
     else
       render :edit, status: :unprocessable_entity
     end
@@ -36,7 +38,7 @@ class Korsarium::LessonsController < Korsarium::BaseController
   def destroy
     @textbook = @lesson.textbook_id
     @lesson.destroy
-    redirect_to @textbook
+    redirect_to korsarium_textbook_path(@textbook)
   end
 
   private
