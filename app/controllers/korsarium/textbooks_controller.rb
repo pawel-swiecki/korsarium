@@ -56,4 +56,3 @@ class Korsarium::TextbooksController < Korsarium::BaseController
     params.expect(textbook: [ :textbook_icon, :title, :subtitle ])
   end
 end
-
