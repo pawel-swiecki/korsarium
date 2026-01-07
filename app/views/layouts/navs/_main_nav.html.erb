@@ -1,11 +1,9 @@
-<nav class="nav repel">
+<nav slot="header">
   <%= link_to image_tag("korsarium-logo-transparent.png", alt: "Korsarium logo", size:"200"), root_path %>
 
-  <div class="repel">
-    <% if authenticated? %>
-      <%= render "layouts/navs/authenticated_main_nav" %>
-    <% else %>
-      <%= render "layouts/navs/unauthenticated_main_nav" %>
-    <% end %>
-  </div>
+  <% if authenticated? %>
+    <%= render "layouts/navs/authenticated_main_nav" %>
+  <% else %>
+    <%= render "layouts/navs/unauthenticated_main_nav" %>
+  <% end %>
 </nav>
