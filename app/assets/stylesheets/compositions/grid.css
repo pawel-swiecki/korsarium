@@ -1,6 +1,0 @@
-.grid {
-  display: grid;
-  grid-gap: var(--space-l);
-  align-content: start;
-  grid-template-columns: 100%;
-}
