@@ -2,8 +2,8 @@
   <%= link_to image_tag("korsarium-logo-transparent.png", alt: "Korsarium logo", size:"200"), root_path %>
 
   <% if authenticated? %>
-    <%= render "layouts/navs/authenticated_main_nav" %>
+    <%= render "layouts/navs/authenticated_nav" %>
   <% else %>
-    <%= render "layouts/navs/unauthenticated_main_nav" %>
+    <%= render "layouts/navs/unauthenticated_nav" %>
   <% end %>
 </nav>
