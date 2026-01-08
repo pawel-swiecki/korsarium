@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root "pages#main"
+  root "courses#index"
 
   # Admin
   namespace :korsarium do
